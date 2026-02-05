@@ -1,0 +1,408 @@
+/* ==========================================================================
+   RTL (Right-to-Left) Support Styles
+   ========================================================================== */
+
+/* Base RTL overrides */
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Fix Bootstrap 5 RTL issues */
+[dir="rtl"] .ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+[dir="rtl"] .me-auto {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+[dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+[dir="rtl"] .ms-2 { margin-left: 0 !important; margin-right: 0.5rem !important; }
+[dir="rtl"] .ms-3 { margin-left: 0 !important; margin-right: 1rem !important; }
+[dir="rtl"] .ms-4 { margin-left: 0 !important; margin-right: 1.5rem !important; }
+[dir="rtl"] .ms-5 { margin-left: 0 !important; margin-right: 3rem !important; }
+
+[dir="rtl"] .me-1 { margin-right: 0 !important; margin-left: 0.25rem !important; }
+[dir="rtl"] .me-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+[dir="rtl"] .me-3 { margin-right: 0 !important; margin-left: 1rem !important; }
+[dir="rtl"] .me-4 { margin-right: 0 !important; margin-left: 1.5rem !important; }
+[dir="rtl"] .me-5 { margin-right: 0 !important; margin-left: 3rem !important; }
+
+[dir="rtl"] .ps-1 { padding-left: 0 !important; padding-right: 0.25rem !important; }
+[dir="rtl"] .ps-2 { padding-left: 0 !important; padding-right: 0.5rem !important; }
+[dir="rtl"] .ps-3 { padding-left: 0 !important; padding-right: 1rem !important; }
+[dir="rtl"] .ps-4 { padding-left: 0 !important; padding-right: 1.5rem !important; }
+[dir="rtl"] .ps-5 { padding-left: 0 !important; padding-right: 3rem !important; }
+
+[dir="rtl"] .pe-1 { padding-right: 0 !important; padding-left: 0.25rem !important; }
+[dir="rtl"] .pe-2 { padding-right: 0 !important; padding-left: 0.5rem !important; }
+[dir="rtl"] .pe-3 { padding-right: 0 !important; padding-left: 1rem !important; }
+[dir="rtl"] .pe-4 { padding-right: 0 !important; padding-left: 1.5rem !important; }
+[dir="rtl"] .pe-5 { padding-right: 0 !important; padding-left: 3rem !important; }
+
+/* Border radius adjustments */
+[dir="rtl"] .rounded-start { border-radius: 0 !important; border-top-right-radius: var(--bs-border-radius) !important; border-bottom-right-radius: var(--bs-border-radius) !important; }
+[dir="rtl"] .rounded-end { border-radius: 0 !important; border-top-left-radius: var(--bs-border-radius) !important; border-bottom-left-radius: var(--bs-border-radius) !important; }
+
+/* Navbar RTL */
+[dir="rtl"] .navbar-brand {
+    margin-left: var(--bs-navbar-brand-margin-end);
+    margin-right: 0;
+}
+
+[dir="rtl"] .navbar-nav {
+    padding-right: 0;
+}
+
+[dir="rtl"] .dropdown-menu[data-bs-popper] {
+    left: auto;
+    right: 0;
+    margin-left: var(--bs-dropdown-spacer);
+    margin-right: 0;
+}
+
+[dir="rtl"] .dropdown-menu-end {
+    --bs-position: start;
+}
+
+[dir="rtl"] .dropdown-menu-end[data-bs-popper] {
+    left: 0;
+    right: auto;
+}
+
+/* Card RTL */
+[dir="rtl"] .card-img-overlay {
+    right: 0;
+    left: 0;
+}
+
+/* Input group RTL */
+[dir="rtl"] .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: var(--bs-border-radius);
+    border-bottom-left-radius: var(--bs-border-radius);
+}
+
+[dir="rtl"] .input-group > :not(:first-child):not(.dropdown-menu) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: var(--bs-border-radius);
+    border-bottom-right-radius: var(--bs-border-radius);
+    margin-left: 0;
+    margin-right: calc(var(--bs-border-width) * -1);
+}
+
+/* List group RTL */
+[dir="rtl"] .list-group {
+    padding-right: 0;
+}
+
+/* Modal RTL */
+[dir="rtl"] .modal-header .btn-close {
+    margin-left: var(--bs-modal-header-padding);
+    margin-right: auto;
+}
+
+[dir="rtl"] .modal-footer {
+    justify-content: space-between;
+}
+
+[dir="rtl"] .modal-footer > :not(:first-child) {
+    margin-left: 0;
+    margin-right: 0.25rem;
+}
+
+[dir="rtl"] .modal-footer > :not(:last-child) {
+    margin-right: 0;
+    margin-left: 0.25rem;
+}
+
+/* Offcanvas RTL */
+[dir="rtl"] .offcanvas-start {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+}
+
+[dir="rtl"] .offcanvas-end {
+    left: 0;
+    right: auto;
+}
+
+/* Pagination RTL */
+[dir="rtl"] .page-item:not(:first-child) .page-link {
+    margin-left: var(--bs-pagination-margin-start);
+    margin-right: calc(var(--bs-pagination-border-width) * -1);
+}
+
+[dir="rtl"] .page-item:first-child .page-link {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: var(--bs-pagination-border-radius);
+    border-bottom-right-radius: var(--bs-pagination-border-radius);
+}
+
+[dir="rtl"] .page-item:last-child .page-link {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: var(--bs-pagination-border-radius);
+    border-bottom-left-radius: var(--bs-pagination-border-radius);
+}
+
+/* Progress RTL */
+[dir="rtl"] .progress-bar {
+    float: right;
+}
+
+/* Toast RTL */
+[dir="rtl"] .toast-container {
+    --bs-toast-spacing: 0.5rem;
+}
+
+/* Custom CSS RTL overrides */
+[dir="rtl"] .hero-content {
+    text-align: right;
+}
+
+[dir="rtl"] .hero-buttons {
+    justify-content: flex-end;
+}
+
+[dir="rtl"] .service-card {
+    text-align: right;
+}
+
+[dir="rtl"] .stat-card {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .footer-links {
+    align-items: flex-end;
+}
+
+[dir="rtl"] .section-title {
+    text-align: right;
+}
+
+/* Sidebar RTL */
+[dir="rtl"] .sidebar {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .main-content {
+    margin-left: 0;
+    margin-right: 280px;
+}
+
+@media (max-width: 1024px) {
+    [dir="rtl"] .main-content {
+        margin-right: 0;
+    }
+    
+    [dir="rtl"] .sidebar {
+        transform: translateX(100%);
+    }
+    
+    [dir="rtl"] .sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+/* Gallery RTL */
+[dir="rtl"] .gallery-overlay {
+    text-align: right;
+}
+
+/* Table RTL */
+[dir="rtl"] .table th,
+[dir="rtl"] .table td {
+    text-align: right;
+}
+
+[dir="rtl"] .table .form-select,
+[dir="rtl"] .table .form-control {
+    background-position: left calc(0.375em + 0.1875rem) center;
+    padding-left: 2.5rem;
+    padding-right: var(--bs-body-font-size);
+}
+
+/* Form RTL */
+[dir="rtl"] .form-check {
+    padding-left: 0;
+    padding-right: 1.5em;
+}
+
+[dir="rtl"] .form-check-input {
+    margin-left: 0;
+    margin-right: -1.5em;
+}
+
+[dir="rtl"] .form-switch .form-check-input {
+    background-position: right center;
+}
+
+[dir="rtl"] .form-switch .form-check-input:checked {
+    background-position: left center;
+}
+
+/* Button group RTL */
+[dir="rtl"] .btn-group > .btn:not(:first-child),
+[dir="rtl"] .btn-group > .btn-group:not(:first-child) {
+    margin-left: 0;
+    margin-right: calc(var(--bs-border-width) * -1);
+    border-top-left-radius: var(--bs-border-radius);
+    border-bottom-left-radius: var(--bs-border-radius);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+[dir="rtl"] .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+[dir="rtl"] .btn-group > .btn-group:not(:last-child) > .btn {
+    border-top-right-radius: var(--bs-border-radius);
+    border-bottom-right-radius: var(--bs-border-radius);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Nav tabs RTL */
+[dir="rtl"] .nav-tabs .nav-link {
+    border-radius: var(--bs-border-radius) var(--bs-border-radius) 0 0;
+}
+
+[dir="rtl"] .nav-tabs .nav-item:first-child .nav-link {
+    border-top-left-radius: 0;
+    border-top-right-radius: var(--bs-border-radius);
+}
+
+[dir="rtl"] .nav-tabs .nav-item:last-child .nav-link {
+    border-top-right-radius: 0;
+    border-top-left-radius: var(--bs-border-radius);
+}
+
+/* Accordion RTL */
+[dir="rtl"] .accordion-button::after {
+    margin-left: var(--bs-accordion-btn-icon-width);
+    margin-right: auto;
+    transform: rotate(180deg);
+}
+
+[dir="rtl"] .accordion-button:not(.collapsed)::after {
+    transform: rotate(0deg);
+}
+
+/* Breadcrumb RTL */
+[dir="rtl"] .breadcrumb {
+    padding-right: 0;
+}
+
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item {
+    padding-left: 0;
+    padding-right: var(--bs-breadcrumb-item-padding);
+}
+
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+    float: right;
+    padding-left: var(--bs-breadcrumb-item-padding);
+    padding-right: 0;
+}
+
+/* Badge RTL */
+[dir="rtl"] .badge {
+    margin-left: 0.25rem;
+    margin-right: 0;
+}
+
+/* Alert RTL */
+[dir="rtl"] .alert-dismissible .btn-close {
+    left: 0;
+    right: auto;
+}
+
+[dir="rtl"] .alert-dismissible {
+    padding-left: 3rem;
+    padding-right: 1rem;
+}
+
+/* Close button RTL */
+[dir="rtl"] .close {
+    float: left;
+}
+
+/* Carousel RTL */
+[dir="rtl"] .carousel-control-prev {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .carousel-control-next {
+    right: auto;
+    left: 0;
+}
+
+/* Custom icon rotation for RTL */
+[dir="rtl"] .bi-arrow-left::before {
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .bi-arrow-right::before {
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .bi-chevron-left::before {
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .bi-chevron-right::before {
+    transform: scaleX(-1);
+}
+
+/* Flip icons horizontally in RTL mode */
+[dir="rtl"] .navbar-toggler-icon {
+    transform: scaleX(-1);
+}
+
+/* Fix Flip buttons */
+[dir="rtl"] .btn-flip {
+    transform: scaleX(-1);
+}
+
+/* Text alignment utilities for RTL */
+[dir="rtl"] .text-start { text-align: right !important; }
+[dir="rtl"] .text-end { text-align: left !important; }
+[dir="rtl"] .text-center { text-align: center !important; }
+
+/* Float utilities for RTL */
+[dir="rtl"] .float-start { float: right !important; }
+[dir="rtl"] .float-end { float: left !important; }
+
+/* Translate X for RTL animations */
+[dir="rtl"] .translate-middle {
+    transform: translate(50%, -50%);
+}
+
+/* Fix shadows in RTL */
+[dir="rtl"] .shadow-sm {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+[dir="rtl"] .shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+[dir="rtl"] .shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+/* Grid direction for RTL */
+[dir="rtl"] .row {
+    direction: rtl;
+}
+
+[dir="rtl"] .row > * {
+    direction: ltr;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>404 - Page Not Found | RoofPro</title>
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error-page bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="error-code mb-4">404</div>
+                    <h1 class="h2 mb-4">Page Not Found</h1>
+                    <p class="text-muted mb-5">
+                        Oops! The page you're looking for doesn't exist or has been moved.
+                        Let's get you back on track.
+                    </p>
+
+                    <form class="mb-5" action="#" method="search">
+                        <div class="input-group input-group-lg justify-content-center">
+                            <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+                            <input type="search" class="form-control" placeholder="Search our site..."
+                                aria-label="Search">
+                            <button class="btn btn-primary" type="submit">Search</button>
+                        </div>
+                    </form>
+
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="index.html" class="btn btn-primary btn-lg">
+                            <i class="bi bi-house me-2"></i>Back to Home
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-primary btn-lg">
+                            <i class="bi bi-envelope me-2"></i>Contact Support
+                        </a>
+                    </div>
+
+                    <div class="mt-5">
+                        <h5 class="mb-3">Popular Pages</h5>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <a href="services.html" class="btn btn-sm btn-outline-secondary">Services</a>
+                            <a href="about.html" class="btn btn-sm btn-outline-secondary">About Us</a>
+                            <a href="blog.html" class="btn btn-sm btn-outline-secondary">Blog</a>
+                            <a href="pricing.html" class="btn btn-sm btn-outline-secondary">Pricing</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 pt-4 border-top">
+                <p class="text-muted small mb-0">
+                    &copy; 2024 RoofPro. All rights reserved. |
+                    Powered by <a href="https://www.abhivorn.com/" target="_blank">AbhiVorn</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

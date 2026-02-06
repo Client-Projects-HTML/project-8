@@ -186,27 +186,36 @@
             this.navbarCollapse = document.querySelector('.navbar-collapse');
 
             if (this.navbarToggler && this.navbarCollapse) {
-                // Toggle mobile menu
-                this.navbarToggler.addEventListener('click', () => {
-                    this.navbarCollapse.classList.toggle('show');
-                    this.navbarToggler.classList.toggle('active');
+                // Listen for Bootstrap collapse events to update the toggler state
+                this.navbarCollapse.addEventListener('show.bs.collapse', () => {
+                    this.navbarToggler.classList.add('active');
                 });
 
-                // Close menu when clicking on a link
-                const navLinks = this.navbarCollapse.querySelectorAll('.nav-link');
+                this.navbarCollapse.addEventListener('hide.bs.collapse', () => {
+                    this.navbarToggler.classList.remove('active');
+                });
+                
+                // Close menu when clicking on a link (except dropdown toggles)
+                const navLinks = this.navbarCollapse.querySelectorAll('.nav-link:not(.dropdown-toggle)');
                 navLinks.forEach(link => {
                     link.addEventListener('click', () => {
-                        this.navbarCollapse.classList.remove('show');
-                        this.navbarToggler.classList.remove('active');
+                         const bsCollapse = bootstrap.Collapse.getInstance(this.navbarCollapse);
+                         if (bsCollapse) {
+                             bsCollapse.hide();
+                         }
                     });
                 });
 
                 // Close menu when clicking outside
                 document.addEventListener('click', (e) => {
-                    if (!this.navbarCollapse.contains(e.target) &&
+                    if (this.navbarCollapse.classList.contains('show') && 
+                        !this.navbarCollapse.contains(e.target) && 
                         !this.navbarToggler.contains(e.target)) {
-                        this.navbarCollapse.classList.remove('show');
-                        this.navbarToggler.classList.remove('active');
+                        
+                        const bsCollapse = bootstrap.Collapse.getInstance(this.navbarCollapse);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        }
                     }
                 });
             }

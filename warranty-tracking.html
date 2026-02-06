@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="RoofPro Client Dashboard - Manage your roofing projects, view drone inspections, track warranties, and approve repair estimates.">
+    <title>Dashboard | RoofPro - Client Portal</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Chart.js for analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar" role="navigation" aria-label="Dashboard navigation">
+            <a class="sidebar-brand d-flex align-items-center gap-2 text-white" href="index.html">
+                <i class="bi bi-building"></i>
+                <span>RoofPro</span>
+            </a>
+
+            <nav class="sidebar-nav mt-4">
+                <a href="dashboard.html" class="sidebar-link">
+                    <i class="bi bi-grid-1x2"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="drone-inspections.html" class="sidebar-link">
+                    <i class="bi bi-camera"></i>
+                    <span>Drone Inspections</span>
+                </a>
+                <a href="warranty-tracking.html" class="sidebar-link active">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Warranty Tracking</span>
+                </a>
+                <a href="repair-approvals.html" class="sidebar-link">
+                    <i class="bi bi-clipboard-check"></i>
+                    <span>Repair Approvals</span>
+                </a>
+                <a href="my-projects.html" class="sidebar-link">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>My Projects</span>
+                </a>
+                <a href="schedule.html" class="sidebar-link">
+                    <i class="bi bi-calendar"></i>
+                    <span>Schedule</span>
+                </a>
+                <a href="messages.html" class="sidebar-link">
+                    <i class="bi bi-chat-dots"></i>
+                    <span>Messages</span>
+                    <span class="badge bg-danger ms-auto">3</span>
+                </a>
+                <a href="settings.html" class="sidebar-link">
+                    <i class="bi bi-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="mt-auto pt-4">
+                <a href="login.html" class="sidebar-link">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <div>
+                    <button class="btn btn-outline-secondary d-lg-none mb-3" id="sidebar-toggle">
+                        <i class="bi bi-list"></i> Menu
+                    </button>
+                    <h1 class="h3 mb-1">Warranty Tracking</h1>
+                    <p class="text-muted mb-0">Monitor active warranties and expiration dates.</p>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown">
+                            <i class="bi bi-bell"></i>
+                            <span class="badge bg-danger position-absolute top-0 end-0">3</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <h6 class="dropdown-header">Notifications</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                    <i class="bi bi-check-circle text-success me-2"></i>Repair estimate approved
+                                </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                    <i class="bi bi-camera text-primary me-2"></i>New drone inspection available
+                                </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                    <i class="bi bi-exclamation-circle text-warning me-2"></i>Warranty expiring soon
+                                </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-center" href="#">View all notifications</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center gap-2"
+                            type="button" data-bs-toggle="dropdown">
+                            <img src="assets/images/avatar1.png" alt="Profile" class="rounded-circle" width="32"
+                                height="32">
+                            <span class="d-none d-sm-inline">John Doe</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Settings</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Warranty Tracking Section -->
+            <div class="row g-4 mt-2">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm glass-card">
+                        <div
+                            class="card-header bg-transparent d-flex justify-content-between align-items-center border-bottom-0 pt-4 px-4">
+                            <h5 class="mb-0 fw-bold"><i class="bi bi-shield-check me-2 text-primary"></i>Warranty
+                                Tracking</h5>
+                            <div id="warranty-warning" class="badge bg-warning text-dark d-none">Warranty expiring soon!
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-container">
+                                <table class="table mb-0" id="warranty-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Client</th>
+                                            <th>Project</th>
+                                            <th>Type</th>
+                                            <th>Start Date</th>
+                                            <th>Expiry Date</th>
+                                            <th>Status</th>
+                                            <th>Days Left</th>
+                                            <th class="text-center">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="align-middle">
+                                        <tr>
+                                            <td class="fw-medium">WRT-001</td>
+                                            <td>Main Office Building</td>
+                                            <td>Material</td>
+                                            <td class="text-nowrap">2023-01-15</td>
+                                            <td class="text-nowrap">2028-01-15</td>
+                                            <td><span class="badge badge-success">Active</span></td>
+                                            <td class="fw-bold">1,460 days</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-sm btn-outline-primary" title="View Details">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-medium">WRT-002</td>
+                                            <td>Warehouse Complex</td>
+                                            <td>Labor</td>
+                                            <td class="text-nowrap">2023-06-01</td>
+                                            <td class="text-nowrap">2025-06-01</td>
+                                            <td><span class="badge badge-success">Active</span></td>
+                                            <td class="fw-bold">485 days</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-sm btn-outline-primary" title="View Details">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-medium">WRT-003</td>
+                                            <td>Data Center</td>
+                                            <td>Comprehensive</td>
+                                            <td class="text-nowrap">2022-03-20</td>
+                                            <td class="text-nowrap">2024-03-20</td>
+                                            <td><span class="badge badge-warning">Expiring Soon</span></td>
+                                            <td class="fw-bold">46 days</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-sm btn-outline-primary" title="View Details">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-medium">WRT-004</td>
+                                            <td>Shopping Center</td>
+                                            <td>Material</td>
+                                            <td class="text-nowrap">2021-08-10</td>
+                                            <td class="text-nowrap">2024-02-10</td>
+                                            <td><span class="badge badge-danger">Expired</span></td>
+                                            <td class="fw-bold text-danger">-8 days</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-sm btn-outline-primary" title="View Details">
+                                                    <i class="bi bi-eye"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="dashboard-footer mt-5">
+                <p class="mb-0">&copy; 2024 RoofPro. All rights reserved. |
+                    Powered by <a href="https://www.abhivorn.com/" target="_blank">AbhiVorn</a>
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="gallery-lightbox" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title lightbox-title">Inspection Details</h5>
+                    <button type="button" class="btn-close lightbox-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" alt="Inspection" class="img-fluid lightbox-image mb-3" style="max-height: 400px;">
+                    <p class="lightbox-date text-muted"></p>
+                    <p class="lightbox-description"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary lightbox-close"
+                        data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="bi bi-download me-2"></i>Download Report
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>
+
+

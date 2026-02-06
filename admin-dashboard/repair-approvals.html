@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <!-- Theme Synchronization Script -->
+    <script>
+        // Apply saved theme immediately to prevent flash
+        (function () {
+            const savedTheme = localStorage.getItem('theme-preference') || 'light';
+            document.documentElement.setAttribute('data-bs-theme', savedTheme);
+
+            const savedDir = localStorage.getItem('dir-preference') || 'ltr';
+            document.documentElement.setAttribute('dir', savedDir);
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repair Approvals | RoofPro - Admin Portal</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+
+<body class="dashboard-page">
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <a class="sidebar-brand d-flex align-items-center gap-2" href="../index.html">
+                <i class="bi bi-building"></i><span>RoofPro</span>
+            </a>
+            <nav class="sidebar-nav mt-4">
+                <a href="index.html" class="sidebar-link"><i class="bi bi-grid-1x2"></i><span>Dashboard</span></a>
+                <a href="warranty-tracking.html" class="sidebar-link"><i class="bi bi-shield-check"></i><span>Warranty
+                        Tracking</span></a>
+                <a href="repair-approvals.html" class="sidebar-link active"><i
+                        class="bi bi-clipboard-check"></i><span>Repair Approvals</span></a>
+                <a href="my-projects.html" class="sidebar-link"><i class="bi bi-file-earmark-text"></i><span>My
+                        Projects</span></a>
+                <a href="schedule.html" class="sidebar-link"><i class="bi bi-calendar"></i><span>Schedule</span></a>
+                <a href="messages.html" class="sidebar-link"><i class="bi bi-chat-dots"></i><span>Messages</span><span
+                        class="badge bg-danger ms-auto">3</span></a>
+                <a href="settings.html" class="sidebar-link"><i class="bi bi-gear"></i><span>Settings</span></a>
+            </nav>
+            <div class="mt-auto pt-4">
+                <a href="../login.html" class="sidebar-link"><i
+                        class="bi bi-box-arrow-right"></i><span>Logout</span></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="dashboard-header">
+                <div>
+                    <button class="btn btn-outline-secondary d-lg-none mb-3" id="sidebar-toggle"><i
+                            class="bi bi-list"></i> Menu</button>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex align-items-center gap-2">
+                        <!-- RTL Toggle -->
+                        <button class="btn btn-outline-secondary btn-icon border-0" id="rtl-toggle"
+                            title="Toggle Direction" style="width: 32px; height: 32px;">
+                            <i class="bi bi-translate"></i>
+                        </button>
+
+                        <!-- Theme Toggle -->
+                        <button class="btn btn-outline-secondary btn-icon border-0" id="theme-toggle"
+                            title="Toggle Theme" style="width: 32px; height: 32px;">
+                            <i class="bi bi-moon"></i>
+                        </button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown">
+                            <i class="bi bi-bell"></i>
+                            <span class="badge bg-danger position-absolute top-0 end-0">3</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <h6 class="dropdown-header">Notifications</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="bi bi-check-circle text-success me-2"></i>Repair estimate approved</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-camera text-primary me-2"></i>New
+                                    drone inspection available</a></li>
+                            <li><a class="dropdown-item" href="#"><i
+                                        class="bi bi-exclamation-circle text-warning me-2"></i>Warranty expiring
+                                    soon</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-center" href="#">View all notifications</a></li>
+                        </ul>
+                    </div>
+
+                    <div><button class="btn btn-outline-secondary d-flex align-items-center gap-2" type="button"><img src="../assets/images/avatar1.png" alt="Profile" class="rounded-circle" width="32" height="32"><span class="d-none d-sm-inline">John Doe</span></button></div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm glass-card">
+                        <div
+                            class="card-header bg-transparent d-flex justify-content-between align-items-center border-bottom-0 pt-4 px-4">
+                            <h5 class="mb-0 fw-bold"><i class="bi bi-clipboard-check me-2 text-primary"></i>Repair
+                                Approvals</h5>
+                            <span class="badge bg-warning">3 Pending</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-group list-group-flush" id="approval-table">
+                                <div class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h6 class="mb-0">Roof Leak Repair</h6>
+                                        <span class="badge badge-danger">High Priority</span>
+                                    </div>
+                                    <p class="text-muted small mb-2">123 Main St, City</p>
+                                    <p class="fw-bold mb-2">$2,500</p>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-sm btn-success flex-fill">Approve</button>
+                                        <button class="btn btn-sm btn-outline-danger">Reject</button>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h6 class="mb-0">Complete Roof Replacement</h6>
+                                        <span class="badge badge-warning">Medium Priority</span>
+                                    </div>
+                                    <p class="text-muted small mb-2">456 Oak Ave, Town</p>
+                                    <p class="fw-bold mb-2">$15,000</p>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-sm btn-success flex-fill">Approve</button>
+                                        <button class="btn btn-sm btn-outline-danger">Reject</button>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h6 class="mb-0">Storm Damage Assessment</h6>
+                                        <span class="badge badge-danger">High Priority</span>
+                                    </div>
+                                    <p class="text-muted small mb-2">789 Business Blvd</p>
+                                    <p class="fw-bold mb-2">$800</p>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-sm btn-success flex-fill">Approve</button>
+                                        <button class="btn btn-sm btn-outline-danger">Reject</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="dashboard-footer mt-5 text-end">
+                <p class="mb-0">
+                    Powered by <a href="https://www.abhivorn.com/" target="_blank" class="text-decoration-none">AbhiVorn Technologies Pvt. Ltd.</a>
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+
+</html>
+
+

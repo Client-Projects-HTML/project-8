@@ -137,7 +137,19 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+/* Page Transition Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 body {
+    animation: fadeIn 0.5s ease-in-out;
     margin: 0;
     font-family: var(--font-primary);
     font-size: 1rem;
@@ -739,6 +751,10 @@ textarea {
 
 [data-bs-theme="dark"] .footer {
     background-color: var(--gray-900);
+}
+
+.footer .text-secondary {
+    color: var(--gray-400) !important;
 }
 
 .footer-title {

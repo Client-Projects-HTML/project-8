@@ -34,6 +34,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme-preference');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.setAttribute('data-bs-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -62,7 +71,8 @@
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+                <div class="hamburger-toggle"><span class="bar"></span><span class="bar"></span><span
+                        class="bar"></span></div>
             </button>
 
             <nav class="collapse navbar-collapse" id="navbarNav">
@@ -84,6 +94,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary" href="login.html">
+                            <i class="bi bi-box-arrow-in-right"></i> Login
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -529,4 +544,3 @@
 </body>
 
 </html>
-

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 
 <head>
@@ -9,7 +9,7 @@
         content="RoofPro Client Dashboard - Manage your roofing projects, view drone inspections, track warranties, and approve repair estimates.">
     <title>Dashboard | RoofPro - Client Portal</title>
 
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
     <script>
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('theme-preference');
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
@@ -42,7 +42,7 @@
                 <span>RoofPro</span>
             </a>
 
-            <nav class="sidebar-nav mt-4">
+            <nav class="sidebar-nav">
                 <a href="dashboard.html" class="sidebar-link">
                     <i class="bi bi-grid-1x2"></i>
                     <span>Dashboard</span>
@@ -90,13 +90,9 @@
         <main class="main-content">
             <!-- Dashboard Header -->
             <div class="dashboard-header">
-                <div>
-                    <button class="btn btn-outline-secondary d-lg-none mb-3" id="sidebar-toggle">
-                        <i class="bi bi-list"></i> Menu
-                    </button>
-                    <h1 class="h3 mb-1">Warranty Tracking</h1>
-                    <p class="text-muted mb-0">Monitor active warranties and expiration dates.</p>
-                </div>
+                <button class="btn btn-outline-secondary d-lg-none" id="sidebar-toggle">
+                    <i class="bi bi-list"></i>
+                </button>
 
                 <div class="d-flex gap-3">
                     <div class="dropdown">
@@ -276,6 +272,3 @@
 </body>
 
 </html>
-
-
-

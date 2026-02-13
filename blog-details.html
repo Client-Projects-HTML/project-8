@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 
 <head>
@@ -9,7 +9,7 @@
         content="5 Essential Commercial Roof Maintenance Tips - Learn the top maintenance tasks every building owner should perform to extend their roof's lifespan.">
     <title>5 Essential Commercial Roof Maintenance Tips | RoofPro Blog</title>
 
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
     <script>
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('theme-preference');
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
@@ -53,26 +53,87 @@
                 </button>
             </div>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <div class="hamburger-toggle"><span class="bar"></span><span class="bar"></span><span
+                        class="bar"></span></div>
             </button>
 
-            <nav class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary" href="login.html">
-                            <i class="bi bi-box-arrow-in-right"></i> Login
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="offcanvas offcanvas-start mobile-sidebar-menu" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title fw-bold text-primary" id="offcanvasNavbarLabel">
+                        <i class="bi bi-building me-2"></i>RoofPro
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Home</a>
+                            <ul class="dropdown-menu nav-rich-dropdown">
+                                <li>
+                                    <a class="rich-dropdown-item active" href="index.html">
+                                        <div class="icon-box icon-box-primary">
+                                            <i class="bi bi-house-door-fill"></i>
+                                        </div>
+                                        <div class="dropdown-text">
+                                            <span class="dropdown-title">Home 1</span>
+                                            <span class="dropdown-subtitle">General</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="rich-dropdown-item" href="index-2.html">
+                                        <div class="icon-box icon-box-purple">
+                                            <i class="bi bi-layers-fill"></i>
+                                        </div>
+                                        <div class="dropdown-text">
+                                            <span class="dropdown-title">Home 2</span>
+                                            <span class="dropdown-subtitle">SaaS / Tech</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                            <div class="btn-group me-2 w-100 w-lg-auto">
+                                <a href="login.html" class="btn btn-outline-primary">Login</a>
+                                <button type="button"
+                                    class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="client-dashboard/index.html">Client Dashboard</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="admin-dashboard/index.html">Admin Dashboard</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="btn btn-primary w-100 w-lg-auto mt-2 mt-lg-0" href="signup.html">
+                                Sign Up
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -316,9 +377,10 @@
                         <li><a href="service-details.html">Roof Installation</a></li>
                         <li><a href="service-details.html">Roof Repair</a></li>
                         <li><a href="service-details.html">Preventive Maintenance</a></li>
-                        <li><a href="service-details.html">Emergency Repairs</a></li>                        <li><a href="service-details.html">Drone Inspections</a></li>
+                        <li><a href="service-details.html">Emergency Repairs</a></li>
+                        <li><a href="service-details.html">Drone Inspections</a></li>
                     </ul>
-                        <li><a href="404.html">Events</a></li>
+                    <li><a href="404.html">Events</a></li>
                     </ul>
                 </div>
 
@@ -370,6 +432,3 @@
 </body>
 
 </html>
-
-
-

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 
 <head>
@@ -11,7 +11,7 @@
         content="commercial roofing services, roof installation, roof repair, roof maintenance, emergency roofing, TPO roofing, EPDM roofing">
     <title>Our Services | RoofPro - Commercial Roofing Solutions</title>
 
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
     <script>
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('theme-preference');
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
@@ -57,45 +57,94 @@
                 </button>
             </div>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <div class="hamburger-toggle"><span class="bar"></span><span class="bar"></span><span
+                        class="bar"></span></div>
             </button>
 
-            <nav class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="services.html" aria-current="page">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pricing.html">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary" href="login.html">
-                            <i class="bi bi-box-arrow-in-right"></i> Login
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="offcanvas offcanvas-start mobile-sidebar-menu" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title fw-bold text-primary" id="offcanvasNavbarLabel">
+                        <i class="bi bi-building me-2"></i>RoofPro
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Home</a>
+                            <ul class="dropdown-menu nav-rich-dropdown">
+                                <li>
+                                    <a class="rich-dropdown-item active" href="index.html">
+                                        <div class="icon-box icon-box-primary">
+                                            <i class="bi bi-house-door-fill"></i>
+                                        </div>
+                                        <div class="dropdown-text">
+                                            <span class="dropdown-title">Home 1</span>
+                                            <span class="dropdown-subtitle">General</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="rich-dropdown-item" href="index-2.html">
+                                        <div class="icon-box icon-box-purple">
+                                            <i class="bi bi-layers-fill"></i>
+                                        </div>
+                                        <div class="dropdown-text">
+                                            <span class="dropdown-title">Home 2</span>
+                                            <span class="dropdown-subtitle">SaaS / Tech</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="services.html" aria-current="page">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                            <div class="btn-group me-2 w-100 w-lg-auto">
+                                <a href="login.html" class="btn btn-outline-primary">Login</a>
+                                <button type="button"
+                                    class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="client-dashboard/index.html">Client Dashboard</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="admin-dashboard/index.html">Admin Dashboard</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="btn btn-primary w-100 w-lg-auto mt-2 mt-lg-0" href="signup.html">
+                                Sign Up
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 
     <main id="main-content">
 
         <!-- Main Services Section -->
-        <section class="section" aria-label="Main Services">
+        <section class="section pt-5 pb-5" aria-label="Main Services">
             <div class="container">
                 <div class="section-title">
                     <h2>What We Offer</h2>
@@ -105,12 +154,12 @@
                 <div class="row g-4">
                     <!-- Service 1 -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="service-card h-100 overflow-hidden">
+                        <div class="service-card h-100 overflow-hidden d-flex flex-column">
                             <div class="service-image">
                                 <img src="assets/images/services/installation.png" alt="Roof Installation"
                                     class="img-fluid w-100" style="height: 200px; object-fit: cover;">
                             </div>
-                            <div class="p-4">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
                                 <div class="service-icon mb-3">
                                     <i class="bi bi-tools fs-2"></i>
                                 </div>
@@ -123,7 +172,8 @@
                                     <li><i class="bi bi-check text-success me-2"></i>Complete replacements</li>
                                     <li><i class="bi bi-check text-success me-2"></i>All roof types</li>
                                 </ul>
-                                <a href="service-details.html?service=installation" class="btn btn-outline-primary">
+                                <a href="service-details.html?service=installation"
+                                    class="btn btn-outline-primary mt-auto">
                                     Learn More
                                     <i class="bi bi-arrow-right"></i>
                                 </a>
@@ -133,12 +183,12 @@
 
                     <!-- Service 2 -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="service-card h-100 overflow-hidden">
+                        <div class="service-card h-100 overflow-hidden d-flex flex-column">
                             <div class="service-image">
-                                <img src="assets/images/services/repair.png" alt="Roof Repair"
-                                    class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+                                <img src="assets/images/services/repair.png" alt="Roof Repair" class="img-fluid w-100"
+                                    style="height: 200px; object-fit: cover;">
                             </div>
-                            <div class="p-4">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
                                 <div class="service-icon mb-3">
                                     <i class="bi bi-wrench-adjustable fs-2"></i>
                                 </div>
@@ -151,7 +201,7 @@
                                     <li><i class="bi bi-check text-success me-2"></i>Storm damage repair</li>
                                     <li><i class="bi bi-check text-success me-2"></i>Patch work</li>
                                 </ul>
-                                <a href="service-details.html?service=repair" class="btn btn-outline-primary">
+                                <a href="service-details.html?service=repair" class="btn btn-outline-primary mt-auto">
                                     Learn More
                                     <i class="bi bi-arrow-right"></i>
                                 </a>
@@ -161,12 +211,12 @@
 
                     <!-- Service 3 -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="service-card h-100 overflow-hidden">
+                        <div class="service-card h-100 overflow-hidden d-flex flex-column">
                             <div class="service-image">
                                 <img src="assets/images/services/maintenance.png" alt="Preventive Maintenance"
                                     class="img-fluid w-100" style="height: 200px; object-fit: cover;">
                             </div>
-                            <div class="p-4">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
                                 <div class="service-icon mb-3">
                                     <i class="bi bi-calendar-check fs-2"></i>
                                 </div>
@@ -179,7 +229,8 @@
                                     <li><i class="bi bi-check text-success me-2"></i>Cleaning services</li>
                                     <li><i class="bi bi-check text-success me-2"></i>Priority scheduling</li>
                                 </ul>
-                                <a href="service-details.html?service=maintenance" class="btn btn-outline-primary">
+                                <a href="service-details.html?service=maintenance"
+                                    class="btn btn-outline-primary mt-auto">
                                     Learn More
                                     <i class="bi bi-arrow-right"></i>
                                 </a>
@@ -189,12 +240,12 @@
 
                     <!-- Service 4 -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="service-card h-100 overflow-hidden">
+                        <div class="service-card h-100 overflow-hidden d-flex flex-column">
                             <div class="service-image">
                                 <img src="assets/images/services/emergency.png" alt="Emergency Repairs"
                                     class="img-fluid w-100" style="height: 200px; object-fit: cover;">
                             </div>
-                            <div class="p-4">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
                                 <div class="service-icon mb-3">
                                     <i class="bi bi-exclamation-triangle fs-2"></i>
                                 </div>
@@ -206,7 +257,8 @@
                                     <li><i class="bi bi-check text-success me-2"></i>Fast response time</li>
                                     <li><i class="bi bi-check text-success me-2"></i>Temporary fixes</li>
                                 </ul>
-                                <a href="service-details.html?service=emergency" class="btn btn-outline-primary">
+                                <a href="service-details.html?service=emergency"
+                                    class="btn btn-outline-primary mt-auto">
                                     Learn More
                                     <i class="bi bi-arrow-right"></i>
                                 </a>
@@ -216,12 +268,12 @@
 
                     <!-- Service 5 -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="service-card h-100 overflow-hidden">
+                        <div class="service-card h-100 overflow-hidden d-flex flex-column">
                             <div class="service-image">
                                 <img src="assets/images/services/drone.png" alt="Drone Inspections"
                                     class="img-fluid w-100" style="height: 200px; object-fit: cover;">
                             </div>
-                            <div class="p-4">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
                                 <div class="service-icon mb-3">
                                     <i class="bi bi-search fs-2"></i>
                                 </div>
@@ -233,7 +285,7 @@
                                     <li><i class="bi bi-check text-success me-2"></i>Hard-to-reach areas</li>
                                     <li><i class="bi bi-check text-success me-2"></i>Detailed reports</li>
                                 </ul>
-                                <a href="service-details.html?service=drone" class="btn btn-outline-primary">
+                                <a href="service-details.html?service=drone" class="btn btn-outline-primary mt-auto">
                                     Learn More
                                     <i class="bi bi-arrow-right"></i>
                                 </a>
@@ -243,12 +295,12 @@
 
                     <!-- Service 6 -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="service-card h-100 overflow-hidden">
+                        <div class="service-card h-100 overflow-hidden d-flex flex-column">
                             <div class="service-image">
                                 <img src="assets/images/services/warranty.png" alt="Warranty Services"
                                     class="img-fluid w-100" style="height: 200px; object-fit: cover;">
                             </div>
-                            <div class="p-4">
+                            <div class="p-4 d-flex flex-column flex-grow-1">
                                 <div class="service-icon mb-3">
                                     <i class="bi bi-file-earmark-text fs-2"></i>
                                 </div>
@@ -261,7 +313,7 @@
                                     <li><i class="bi bi-check text-success me-2"></i>Transferable options</li>
                                     <li><i class="bi bi-check text-success me-2"></i>Certificate issuance</li>
                                 </ul>
-                                <a href="service-details.html?service=warranty" class="btn btn-outline-primary">
+                                <a href="service-details.html?service=warranty" class="btn btn-outline-primary mt-auto">
                                     Learn More
                                     <i class="bi bi-arrow-right"></i>
                                 </a>
@@ -284,8 +336,10 @@
                     <div class="col-md-4">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body text-center p-5">
-                                <div class="display-4 text-primary mb-3">
-                                    <i class="bi bi-square"></i>
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <img src="https://loremflickr.com/200/200/roofing,white?lock=1" alt="TPO Roofing"
+                                        class="img-fluid rounded-circle" width="80" height="80"
+                                        style="object-fit: cover;">
                                 </div>
                                 <h4>TPO Roofing</h4>
                                 <p class="text-muted mb-3">
@@ -299,8 +353,10 @@
                     <div class="col-md-4">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body text-center p-5">
-                                <div class="display-4 text-primary mb-3">
-                                    <i class="bi bi-circle"></i>
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <img src="https://loremflickr.com/200/200/roofing,black?lock=2" alt="EPDM Roofing"
+                                        class="img-fluid rounded-circle" width="80" height="80"
+                                        style="object-fit: cover;">
                                 </div>
                                 <h4>EPDM Roofing</h4>
                                 <p class="text-muted mb-3">
@@ -314,8 +370,10 @@
                     <div class="col-md-4">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body text-center p-5">
-                                <div class="display-4 text-primary mb-3">
-                                    <i class="bi bi-diamond"></i>
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <img src="https://loremflickr.com/200/200/roofing,metal?lock=3" alt="Metal Roofing"
+                                        class="img-fluid rounded-circle" width="80" height="80"
+                                        style="object-fit: cover;">
                                 </div>
                                 <h4>Metal Roofing</h4>
                                 <p class="text-muted mb-3">
@@ -329,8 +387,10 @@
                     <div class="col-md-4">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body text-center p-5">
-                                <div class="display-4 text-primary mb-3">
-                                    <i class="bi bi-layers"></i>
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <img src="https://loremflickr.com/200/200/roofing,pvc?lock=4" alt="PVC Roofing"
+                                        class="img-fluid rounded-circle" width="80" height="80"
+                                        style="object-fit: cover;">
                                 </div>
                                 <h4>PVC Roofing</h4>
                                 <p class="text-muted mb-3">
@@ -343,8 +403,10 @@
                     <div class="col-md-4">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body text-center p-5">
-                                <div class="display-4 text-primary mb-3">
-                                    <i class="bi bi-grid-3x3"></i>
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <img src="https://loremflickr.com/200/200/asphalt,texture?lock=5"
+                                        alt="Modified Bitumen" class="img-fluid rounded-circle" width="80" height="80"
+                                        style="object-fit: cover;">
                                 </div>
                                 <h4>Modified Bitumen</h4>
                                 <p class="text-muted mb-3">
@@ -357,8 +419,10 @@
                     <div class="col-md-4">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body text-center p-5">
-                                <div class="display-4 text-primary mb-3">
-                                    <i class="bi bi-flower1"></i>
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <img src="https://loremflickr.com/200/200/roofing,green,grass?lock=6"
+                                        alt="Green Roofing" class="img-fluid rounded-circle" width="80" height="80"
+                                        style="object-fit: cover;">
                                 </div>
                                 <h4>Green Roofing</h4>
                                 <p class="text-muted mb-3">
@@ -617,5 +681,3 @@
 </body>
 
 </html>
-
-

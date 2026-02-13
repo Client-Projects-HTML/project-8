@@ -209,6 +209,14 @@
     background: rgba(22, 27, 34, 0.9) !important;
 }
 
+[data-bs-theme="dark"] .glass-card p {
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .glass-card small {
+    color: #c9d1d9 !important;
+}
+
 /* Dark mode stat cards */
 [data-bs-theme="dark"] .stat-card {
     background-color: #161b22;

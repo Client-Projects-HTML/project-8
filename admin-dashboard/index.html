@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 
 <head>
@@ -45,7 +45,7 @@
                 <span>RoofPro</span>
             </a>
 
-            <nav class="sidebar-nav mt-4">
+            <nav class="sidebar-nav">
                 <a href="index.html" class="sidebar-link active">
                     <i class="bi bi-grid-1x2"></i>
                     <span>Dashboard</span>
@@ -89,46 +89,35 @@
         <main class="main-content">
             <!-- Dashboard Header -->
             <div class="dashboard-header">
-                <div>
-                    <button class="btn btn-outline-secondary d-lg-none mb-3" id="sidebar-toggle">
-                        <i class="bi bi-list"></i> Menu
+                <button class="btn btn-outline-secondary d-lg-none" id="sidebar-toggle">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <div class="d-flex align-items-center gap-3 ms-auto">
+                    <!-- RTL Toggle -->
+                    <button class="header-btn" id="rtl-toggle" title="Toggle Direction">
+                        <i class="bi bi-translate"></i>
                     </button>
-                    <!-- <h1 class="h3 mb-1">Welcome back, John!</h1>
-                    <p class="text-muted mb-0">Here's what's happening with your roofing projects.</p> -->
-                </div>
 
-                <div class="d-flex align-items-center gap-3">
-                    <div class="d-flex align-items-center gap-2">
-                        <!-- RTL Toggle -->
-                        <button class="btn btn-outline-secondary btn-icon border-0" id="rtl-toggle"
-                            title="Toggle Direction" style="width: 32px; height: 32px;">
-                            <i class="bi bi-translate"></i>
-                        </button>
+                    <!-- Theme Toggle -->
+                    <button class="header-btn" id="theme-toggle" title="Toggle Theme">
+                        <i class="bi bi-moon"></i>
+                    </button>
 
-                        <!-- Theme Toggle -->
-                        <button class="btn btn-outline-secondary btn-icon border-0" id="theme-toggle"
-                            title="Toggle Theme" style="width: 32px; height: 32px;">
-                            <i class="bi bi-moon"></i>
-                        </button>
-                    </div>
+                    <!-- Notifications -->
                     <div class="dropdown">
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                            data-bs-toggle="dropdown">
+                        <button class="notification-btn" type="button" data-bs-toggle="dropdown">
                             <i class="bi bi-bell"></i>
-                            <span class="badge bg-danger position-absolute top-0 end-0">3</span>
+                            <span class="badge bg-danger">3</span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
                                 <h6 class="dropdown-header">Notifications</h6>
                             </li>
-                            <li><a class="dropdown-item" href="#"><i
-                                        class="bi bi-check-circle text-success me-2"></i>Repair estimate approved</a>
-                            </li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-camera text-primary me-2"></i>New
-                                    drone inspection available</a></li>
-                            <li><a class="dropdown-item" href="#"><i
-                                        class="bi bi-exclamation-circle text-warning me-2"></i>Warranty expiring
-                                    soon</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person-plus text-primary me-2"></i>New
+                                    client registration</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-cart-check text-success me-2"></i>New
+                                    order received</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -136,13 +125,17 @@
                         </ul>
                     </div>
 
-                    <div><button class="btn btn-outline-secondary d-flex align-items-center gap-2" type="button"><img src="../assets/images/avatar1.png" alt="Profile" class="rounded-circle" width="32" height="32"><span class="d-none d-sm-inline">John Doe</span></button></div>
+                    <!-- Profile -->
+                    <button class="header-profile-btn" type="button">
+                        <img src="../assets/images/avatar1.png" alt="Profile" class="rounded-circle" width="32"
+                            height="32">
+                    </button>
                 </div>
             </div>
 
             <!-- Stats Cards -->
             <div class="row g-4 mb-4">
-                <div class="col-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div class="stat-card glass-card">
                         <div class="stat-icon bg-primary bg-opacity-10 text-primary">
                             <i class="bi bi-building fs-3"></i>
@@ -153,7 +146,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div class="stat-card glass-card">
                         <div class="stat-icon bg-success bg-opacity-10 text-success">
                             <i class="bi bi-camera fs-3"></i>
@@ -164,7 +157,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div class="stat-card glass-card">
                         <div class="stat-icon bg-warning bg-opacity-10 text-warning">
                             <i class="bi bi-clock-history fs-3"></i>
@@ -175,7 +168,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div class="stat-card glass-card">
                         <div class="stat-icon bg-info bg-opacity-10 text-info">
                             <i class="bi bi-shield-check fs-3"></i>
@@ -210,15 +203,15 @@
                                 </div>
                                 <div class="col-6 col-md-4">
                                     <div class="gallery-item">
-                                        <img src="../assets/images/inspection-warehouse-roof.png"
-                                            alt="Warehouse Roof B" loading="lazy">
+                                        <img src="../assets/images/inspection-warehouse-roof.png" alt="Warehouse Roof B"
+                                            loading="lazy">
                                         <div class="gallery-overlay"><span>Warehouse Roof B</span></div>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-4">
                                     <div class="gallery-item">
-                                        <img src="../assets/images/inspection-office-complex.png"
-                                            alt="Office Complex C" loading="lazy">
+                                        <img src="../assets/images/inspection-office-complex.png" alt="Office Complex C"
+                                            loading="lazy">
                                         <div class="gallery-overlay"><span>Office Complex C</span></div>
                                     </div>
                                 </div>
@@ -320,15 +313,7 @@
                 </div>
             </div>
 
-            <footer class="dashboard-footer mt-5">
-                <div class="d-flex justify-content-end align-items-center">
-                    <p class="mb-0 text-end">
-                        Powered by <a href="https://www.abhivorn.com/" target="_blank"
-                            class="text-decoration-none">AbhiVorn Technologies Pvt.
-                            Ltd.</a>
-                    </p>
-                </div>
-            </footer>
+
         </main>
     </div>
 
@@ -337,5 +322,3 @@
 </body>
 
 </html>
-
-

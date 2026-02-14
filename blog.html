@@ -38,15 +38,35 @@
     <a href="#main-content" class="visually-hidden-focusable btn btn-primary position-absolute top-0 start-0 m-2"
         style="z-index: 9999;">Skip to main content</a>
 
-    <!-- Header -->
-    <header class="navbar navbar-expand-lg navbar-light fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm py-3" id="main-nav">
         <div class="container">
-            <a class="navbar-brand" href="index.html" aria-label="Go to homepage">
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <div class="hamburger-toggle"><span class="bar"></span><span class="bar"></span><span
+                        class="bar"></span></div>
+            </button>
+
+            <a class="navbar-brand me-auto" href="index.html" aria-label="Go to homepage">
                 <i class="bi bi-building"></i>
                 <span>RoofPro</span>
             </a>
 
-            <div class="d-flex align-items-center gap-2 ms-auto me-2 me-lg-0 order-lg-3">
+            <div class="d-flex align-items-center gap-1 gap-sm-2 ms-auto order-lg-3">
+                <div class="btn-group d-lg-none">
+                    <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+                    <button type="button" class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow">
+                        <li><a class="dropdown-item" href="client-dashboard/index.html"><i
+                                    class="bi bi-person me-2 text-primary"></i>Client Dashboard</a></li>
+                        <li><a class="dropdown-item" href="admin-dashboard/index.html"><i
+                                    class="bi bi-shield-lock me-2 text-primary"></i>Admin Dashboard</a></li>
+                    </ul>
+                </div>
                 <button class="btn btn-icon btn-outline-secondary" id="rtl-toggle" aria-label="Toggle RTL mode"
                     title="RTL Mode">
                     <i class="bi bi-translate"></i>
@@ -56,12 +76,6 @@
                     <i class="bi bi-moon-fill"></i>
                 </button>
             </div>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <div class="hamburger-toggle"><span class="bar"></span><span class="bar"></span><span
-                        class="bar"></span></div>
-            </button>
 
             <div class="offcanvas offcanvas-start mobile-sidebar-menu" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
@@ -116,11 +130,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
-                        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                            <div class="btn-group me-2 w-100 w-lg-auto">
-                                <a href="login.html" class="btn btn-outline-primary">Login</a>
+                        <li class="nav-item ms-lg-3 mt-3 mt-lg-0 d-lg-flex align-items-center gap-2">
+                            <div class="btn-group w-100 w-lg-auto d-none d-lg-flex">
+                                <a href="login.html" class="btn btn-outline-primary btn-sm">Login</a>
                                 <button type="button"
-                                    class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                    class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split btn-sm"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="visually-hidden">Toggle Dropdown</span>
                                 </button>
@@ -131,7 +145,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a class="btn btn-primary w-100 w-lg-auto mt-2 mt-lg-0" href="signup.html">
+                            <a class="btn btn-primary w-100 w-lg-auto mt-2 mt-lg-0 btn-sm" href="signup.html">
                                 Sign Up
                             </a>
                         </li>
@@ -139,346 +153,347 @@
                 </div>
             </div>
         </div>
-    </header>
+        </header>
 
-    <main id="main-content">
+        <main id="main-content">
 
-        <!-- Blog Content -->
-        <section class="section pt-5 pb-5" aria-label="Blog Posts">
-            <div class="container">
-                <!-- Search & Filter -->
-                <div class="row g-4 mb-5">
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="bi bi-search"></i></span>
-                            <input type="search" class="form-control" placeholder="Search articles..."
-                                aria-label="Search">
-                            <button class="btn btn-primary" type="button">Search</button>
+            <!-- Blog Content -->
+            <section class="section pt-5 pb-5" aria-label="Blog Posts">
+                <div class="container">
+                    <!-- Search & Filter -->
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-search"></i></span>
+                                <input type="search" class="form-control" placeholder="Search articles..."
+                                    aria-label="Search">
+                                <button class="btn btn-primary" type="button">Search</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex gap-2 flex-wrap justify-content-md-end">
+                                <button class="btn btn-outline-primary" data-filter="all">All</button>
+                                <button class="btn btn-outline-primary" data-filter="maintenance">Maintenance</button>
+                                <button class="btn btn-outline-primary" data-filter="installation">Installation</button>
+                                <button class="btn btn-outline-primary" data-filter="news">News</button>
+                                <button class="btn btn-outline-primary" data-filter="tips">Tips</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="d-flex gap-2 flex-wrap justify-content-md-end">
-                            <button class="btn btn-outline-primary" data-filter="all">All</button>
-                            <button class="btn btn-outline-primary" data-filter="maintenance">Maintenance</button>
-                            <button class="btn btn-outline-primary" data-filter="installation">Installation</button>
-                            <button class="btn btn-outline-primary" data-filter="news">News</button>
-                            <button class="btn btn-outline-primary" data-filter="tips">Tips</button>
+
+                    <!-- Blog Grid -->
+                    <div class="row g-4">
+                        <!-- Blog Post 1 -->
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card h-100 border-0 shadow-sm">
+                                <img src="assets/images/blog/maintenance-tips.png" alt="Commercial roof maintenance"
+                                    class="card-img-top" width="400" height="250">
+                                <div class="card-body">
+                                    <div class="d-flex gap-2 mb-3">
+                                        <span class="badge bg-primary">Maintenance</span>
+                                        <span class="badge bg-secondary">5 min read</span>
+                                    </div>
+                                    <h3 class="h5 card-title">
+                                        <a href="blog-details.html" class="link-body-emphasis text-decoration-none">
+                                            5 Essential Commercial Roof Maintenance Tips
+                                        </a>
+                                    </h3>
+                                    <p class="card-text text-muted">
+                                        Regular maintenance is key to extending your roof's lifespan.
+                                        Learn the top 5 maintenance tasks every building owner should perform.
+                                    </p>
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <img src="assets/images/author-john.png" alt="John Smith"
+                                            class="rounded-circle object-fit-cover" width="40" height="40">
+                                        <div>
+                                            <p class="mb-0 small fw-bold">John Smith</p>
+                                            <p class="mb-0 small text-muted">Jan 15, 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Blog Post 2 -->
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card h-100 border-0 shadow-sm">
+                                <img src="assets/images/blog/tpo-roofing.png" alt="TPO roofing installation"
+                                    class="card-img-top" width="400" height="250">
+                                <div class="card-body">
+                                    <div class="d-flex gap-2 mb-3">
+                                        <span class="badge bg-success">Installation</span>
+                                        <span class="badge bg-secondary">7 min read</span>
+                                    </div>
+                                    <h3 class="h5 card-title">
+                                        <a href="blog-details.html" class="link-body-emphasis text-decoration-none">
+                                            Why TPO Roofing Is Perfect for Commercial Buildings
+                                        </a>
+                                    </h3>
+                                    <p class="card-text text-muted">
+                                        TPO roofing has become increasingly popular. Discover the benefits
+                                        and why it might be the right choice for your building.
+                                    </p>
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <img src="assets/images/author-sarah.png" alt="Sarah Johnson"
+                                            class="rounded-circle object-fit-cover" width="40" height="40">
+                                        <div>
+                                            <p class="mb-0 small fw-bold">Sarah Johnson</p>
+                                            <p class="mb-0 small text-muted">Jan 10, 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Blog Post 3 -->
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card h-100 border-0 shadow-sm">
+                                <img src="assets/images/blog/inspection-signs.png" alt="Drone roof inspection"
+                                    class="card-img-top" width="400" height="250">
+                                <div class="card-body">
+                                    <div class="d-flex gap-2 mb-3">
+                                        <span class="badge bg-info">Tips</span>
+                                        <span class="badge bg-secondary">4 min read</span>
+                                    </div>
+                                    <h3 class="h5 card-title">
+                                        <a href="blog-details.html" class="link-body-emphasis text-decoration-none">
+                                            Signs Your Commercial Roof Needs Replacement
+                                        </a>
+                                    </h3>
+                                    <p class="card-text text-muted">
+                                        Don't wait for a major leak. Learn the warning signs that indicate
+                                        it's time to replace your commercial roof.
+                                    </p>
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <img src="assets/images/author-mike.png" alt="Mike Williams"
+                                            class="rounded-circle object-fit-cover" width="40" height="40">
+                                        <div>
+                                            <p class="mb-0 small fw-bold">Mike Williams</p>
+                                            <p class="mb-0 small text-muted">Jan 5, 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Blog Post 4 -->
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card h-100 border-0 shadow-sm">
+                                <img src="assets/images/blog/cool-roofs.png" alt="Energy efficient roofing"
+                                    class="card-img-top" width="400" height="250">
+                                <div class="card-body">
+                                    <div class="d-flex gap-2 mb-3">
+                                        <span class="badge bg-warning">News</span>
+                                        <span class="badge bg-secondary">6 min read</span>
+                                    </div>
+                                    <h3 class="h5 card-title">
+                                        <a href="blog-details.html" class="link-body-emphasis text-decoration-none">
+                                            How Cool Roofs Can Reduce Your Energy Costs
+                                        </a>
+                                    </h3>
+                                    <p class="card-text text-muted">
+                                        Cool roofs reflect more sunlight and absorb less heat.
+                                        Learn how this can significantly reduce your cooling costs.
+                                    </p>
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <img src="assets/images/author-emily.png" alt="Emily Chen"
+                                            class="rounded-circle object-fit-cover" width="40" height="40">
+                                        <div>
+                                            <p class="mb-0 small fw-bold">Emily Chen</p>
+                                            <p class="mb-0 small text-muted">Dec 28, 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Blog Post 5 -->
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card h-100 border-0 shadow-sm">
+                                <img src="assets/images/blog/storm-damage.png" alt="Storm damage roof repair"
+                                    class="card-img-top" width="400" height="250">
+                                <div class="card-body">
+                                    <div class="d-flex gap-2 mb-3">
+                                        <span class="badge bg-danger">Maintenance</span>
+                                        <span class="badge bg-secondary">5 min read</span>
+                                    </div>
+                                    <h3 class="h5 card-title">
+                                        <a href="blog-details.html" class="link-body-emphasis text-decoration-none">
+                                            What To Do After Storm Damage
+                                        </a>
+                                    </h3>
+                                    <p class="card-text text-muted">
+                                        Severe weather can cause significant damage. Follow these steps
+                                        to document damage and start the repair process.
+                                    </p>
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <img src="assets/images/author-john.png" alt="John Smith"
+                                            class="rounded-circle object-fit-cover" width="40" height="40">
+                                        <div>
+                                            <p class="mb-0 small fw-bold">John Smith</p>
+                                            <p class="mb-0 small text-muted">Dec 20, 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Blog Post 6 -->
+                        <div class="col-md-6 col-lg-4">
+                            <article class="card h-100 border-0 shadow-sm">
+                                <img src="assets/images/blog/warranty.png" alt="Roof warranty guide"
+                                    class="card-img-top" width="400" height="250">
+                                <div class="card-body">
+                                    <div class="d-flex gap-2 mb-3">
+                                        <span class="badge bg-primary">Tips</span>
+                                        <span class="badge bg-secondary">8 min read</span>
+                                    </div>
+                                    <h3 class="h5 card-title">
+                                        <a href="blog-details.html" class="link-body-emphasis text-decoration-none">
+                                            Understanding Your Roof Warranty
+                                        </a>
+                                    </h3>
+                                    <p class="card-text text-muted">
+                                        Roof warranties can be confusing. We break down the different
+                                        types of coverage and what to watch out for.
+                                    </p>
+                                    <div class="d-flex align-items-center gap-2 mt-3">
+                                        <img src="assets/images/author-sarah.png" alt="Sarah Johnson"
+                                            class="rounded-circle object-fit-cover" width="40" height="40">
+                                        <div>
+                                            <p class="mb-0 small fw-bold">Sarah Johnson</p>
+                                            <p class="mb-0 small text-muted">Dec 15, 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Blog Grid -->
-                <div class="row g-4">
-                    <!-- Blog Post 1 -->
-                    <div class="col-md-6 col-lg-4">
-                        <article class="card h-100 border-0 shadow-sm">
-                            <img src="assets/images/blog/maintenance-tips.png" alt="Commercial roof maintenance"
-                                class="card-img-top" width="400" height="250">
-                            <div class="card-body">
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge bg-primary">Maintenance</span>
-                                    <span class="badge bg-secondary">5 min read</span>
-                                </div>
-                                <h3 class="h5 card-title">
-                                    <a href="blog-details.html" class="link-body-emphasis text-decoration-none">
-                                        5 Essential Commercial Roof Maintenance Tips
-                                    </a>
-                                </h3>
-                                <p class="card-text text-muted">
-                                    Regular maintenance is key to extending your roof's lifespan.
-                                    Learn the top 5 maintenance tasks every building owner should perform.
-                                </p>
-                                <div class="d-flex align-items-center gap-2 mt-3">
-                                    <img src="assets/images/author-john.png" alt="John Smith"
-                                        class="rounded-circle object-fit-cover" width="40" height="40">
-                                    <div>
-                                        <p class="mb-0 small fw-bold">John Smith</p>
-                                        <p class="mb-0 small text-muted">Jan 15, 2024</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Blog Post 2 -->
-                    <div class="col-md-6 col-lg-4">
-                        <article class="card h-100 border-0 shadow-sm">
-                            <img src="assets/images/blog/tpo-roofing.png" alt="TPO roofing installation"
-                                class="card-img-top" width="400" height="250">
-                            <div class="card-body">
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge bg-success">Installation</span>
-                                    <span class="badge bg-secondary">7 min read</span>
-                                </div>
-                                <h3 class="h5 card-title">
-                                    <a href="blog-details.html" class="link-body-emphasis text-decoration-none">
-                                        Why TPO Roofing Is Perfect for Commercial Buildings
-                                    </a>
-                                </h3>
-                                <p class="card-text text-muted">
-                                    TPO roofing has become increasingly popular. Discover the benefits
-                                    and why it might be the right choice for your building.
-                                </p>
-                                <div class="d-flex align-items-center gap-2 mt-3">
-                                    <img src="assets/images/author-sarah.png" alt="Sarah Johnson"
-                                        class="rounded-circle object-fit-cover" width="40" height="40">
-                                    <div>
-                                        <p class="mb-0 small fw-bold">Sarah Johnson</p>
-                                        <p class="mb-0 small text-muted">Jan 10, 2024</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Blog Post 3 -->
-                    <div class="col-md-6 col-lg-4">
-                        <article class="card h-100 border-0 shadow-sm">
-                            <img src="assets/images/blog/inspection-signs.png" alt="Drone roof inspection"
-                                class="card-img-top" width="400" height="250">
-                            <div class="card-body">
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge bg-info">Tips</span>
-                                    <span class="badge bg-secondary">4 min read</span>
-                                </div>
-                                <h3 class="h5 card-title">
-                                    <a href="blog-details.html" class="link-body-emphasis text-decoration-none">
-                                        Signs Your Commercial Roof Needs Replacement
-                                    </a>
-                                </h3>
-                                <p class="card-text text-muted">
-                                    Don't wait for a major leak. Learn the warning signs that indicate
-                                    it's time to replace your commercial roof.
-                                </p>
-                                <div class="d-flex align-items-center gap-2 mt-3">
-                                    <img src="assets/images/author-mike.png" alt="Mike Williams"
-                                        class="rounded-circle object-fit-cover" width="40" height="40">
-                                    <div>
-                                        <p class="mb-0 small fw-bold">Mike Williams</p>
-                                        <p class="mb-0 small text-muted">Jan 5, 2024</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Blog Post 4 -->
-                    <div class="col-md-6 col-lg-4">
-                        <article class="card h-100 border-0 shadow-sm">
-                            <img src="assets/images/blog/cool-roofs.png" alt="Energy efficient roofing"
-                                class="card-img-top" width="400" height="250">
-                            <div class="card-body">
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge bg-warning">News</span>
-                                    <span class="badge bg-secondary">6 min read</span>
-                                </div>
-                                <h3 class="h5 card-title">
-                                    <a href="blog-details.html" class="link-body-emphasis text-decoration-none">
-                                        How Cool Roofs Can Reduce Your Energy Costs
-                                    </a>
-                                </h3>
-                                <p class="card-text text-muted">
-                                    Cool roofs reflect more sunlight and absorb less heat.
-                                    Learn how this can significantly reduce your cooling costs.
-                                </p>
-                                <div class="d-flex align-items-center gap-2 mt-3">
-                                    <img src="assets/images/author-emily.png" alt="Emily Chen"
-                                        class="rounded-circle object-fit-cover" width="40" height="40">
-                                    <div>
-                                        <p class="mb-0 small fw-bold">Emily Chen</p>
-                                        <p class="mb-0 small text-muted">Dec 28, 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Blog Post 5 -->
-                    <div class="col-md-6 col-lg-4">
-                        <article class="card h-100 border-0 shadow-sm">
-                            <img src="assets/images/blog/storm-damage.png" alt="Storm damage roof repair"
-                                class="card-img-top" width="400" height="250">
-                            <div class="card-body">
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge bg-danger">Maintenance</span>
-                                    <span class="badge bg-secondary">5 min read</span>
-                                </div>
-                                <h3 class="h5 card-title">
-                                    <a href="blog-details.html" class="link-body-emphasis text-decoration-none">
-                                        What To Do After Storm Damage
-                                    </a>
-                                </h3>
-                                <p class="card-text text-muted">
-                                    Severe weather can cause significant damage. Follow these steps
-                                    to document damage and start the repair process.
-                                </p>
-                                <div class="d-flex align-items-center gap-2 mt-3">
-                                    <img src="assets/images/author-john.png" alt="John Smith"
-                                        class="rounded-circle object-fit-cover" width="40" height="40">
-                                    <div>
-                                        <p class="mb-0 small fw-bold">John Smith</p>
-                                        <p class="mb-0 small text-muted">Dec 20, 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Blog Post 6 -->
-                    <div class="col-md-6 col-lg-4">
-                        <article class="card h-100 border-0 shadow-sm">
-                            <img src="assets/images/blog/warranty.png" alt="Roof warranty guide" class="card-img-top"
-                                width="400" height="250">
-                            <div class="card-body">
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge bg-primary">Tips</span>
-                                    <span class="badge bg-secondary">8 min read</span>
-                                </div>
-                                <h3 class="h5 card-title">
-                                    <a href="blog-details.html" class="link-body-emphasis text-decoration-none">
-                                        Understanding Your Roof Warranty
-                                    </a>
-                                </h3>
-                                <p class="card-text text-muted">
-                                    Roof warranties can be confusing. We break down the different
-                                    types of coverage and what to watch out for.
-                                </p>
-                                <div class="d-flex align-items-center gap-2 mt-3">
-                                    <img src="assets/images/author-sarah.png" alt="Sarah Johnson"
-                                        class="rounded-circle object-fit-cover" width="40" height="40">
-                                    <div>
-                                        <p class="mb-0 small fw-bold">Sarah Johnson</p>
-                                        <p class="mb-0 small text-muted">Dec 15, 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
+            <!-- Newsletter Section -->
+            <section class="section bg-light" aria-label="Newsletter">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 text-center">
+                            <h2 class="mb-3">Stay Updated</h2>
+                            <p class="text-muted mb-4">
+                                Subscribe to our newsletter for the latest roofing tips, industry news, and special
+                                offers.
+                            </p>
+                            <form class="newsletter-form d-flex gap-2">
+                                <input type="email" class="form-control" placeholder="Enter your email" required>
+                                <button type="submit" class="btn btn-primary">
+                                    Subscribe
+                                </button>
+                            </form>
+                            <p class="small text-muted mt-2 mb-0">
+                                We respect your privacy. Unsubscribe at any time.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <!-- Newsletter Section -->
-        <section class="section bg-light" aria-label="Newsletter">
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <h2 class="mb-3">Stay Updated</h2>
-                        <p class="text-muted mb-4">
-                            Subscribe to our newsletter for the latest roofing tips, industry news, and special offers.
+                <div class="row g-5">
+                    <div class="col-lg-4">
+                        <a class="footer-brand d-flex align-items-center gap-2 mb-4" href="index.html">
+                            <i class="bi bi-building"></i>
+                            <span>RoofPro</span>
+                        </a>
+                        <p class="text-secondary mb-4">
+                            Professional commercial roofing services backed by 20+ years of experience.
+                            Quality installations, repairs, and maintenance for businesses.
                         </p>
-                        <form class="newsletter-form d-flex gap-2">
-                            <input type="email" class="form-control" placeholder="Enter your email" required>
-                            <button type="submit" class="btn btn-primary">
-                                Subscribe
-                            </button>
-                        </form>
-                        <p class="small text-muted mt-2 mb-0">
-                            We respect your privacy. Unsubscribe at any time.
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Twitter">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-2">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="coming-soon.html">Events</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <h4 class="footer-title">Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="service-details.html">Roof Installation</a></li>
+                            <li><a href="service-details.html">Roof Repair</a></li>
+                            <li><a href="service-details.html">Preventive Maintenance</a></li>
+                            <li><a href="service-details.html">Emergency Repairs</a></li>
+                            <li><a href="service-details.html">Drone Inspections</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <h4 class="footer-title">Contact Info</h4>
+                        <ul class="footer-links">
+                            <li class="d-flex align-items-start gap-3">
+                                <i class="bi bi-geo-alt text-primary"></i>
+                                <span>123 Business Ave, Suite 100<br>City, State 12345</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-3">
+                                <i class="bi bi-telephone text-primary"></i>
+                                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                            </li>
+                            <li class="d-flex align-items-center gap-3">
+                                <i class="bi bi-envelope text-primary"></i>
+                                <a href="mailto:info@roofpro.com">info@roofpro.com</a>
+                            </li>
+                            <li class="d-flex align-items-center gap-3">
+                                <i class="bi bi-clock text-primary"></i>
+                                <span>Mon-Fri: 8AM - 6PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                        <p class="mb-0 text-center text-md-start">&copy; 2024 RoofPro. All rights reserved. |
+                            <a href="#">Privacy Policy</a> |
+                            <a href="#">Terms of Service</a>
+                        </p>
+                        <p class="mb-0 text-center text-md-end">
+                            Powered by <a href="https://www.abhivorn.com/" target="_blank">AbhiVorn Technologies Pvt.
+                                Ltd.</a>
                         </p>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </footer>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <a class="footer-brand d-flex align-items-center gap-2 mb-4" href="index.html">
-                        <i class="bi bi-building"></i>
-                        <span>RoofPro</span>
-                    </a>
-                    <p class="text-secondary mb-4">
-                        Professional commercial roofing services backed by 20+ years of experience.
-                        Quality installations, repairs, and maintenance for businesses.
-                    </p>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Facebook">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                        <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Twitter">
-                            <i class="bi bi-twitter-x"></i>
-                        </a>
-                        <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="LinkedIn">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                        <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Instagram">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                    </div>
-                </div>
+        <a href="#" id="back-to-top" class="btn btn-primary btn-icon position-fixed bottom-0 end-0 m-4"
+            style="display: none; z-index: 1000;" aria-label="Back to top">
+            <i class="bi bi-arrow-up"></i>
+        </a>
 
-                <div class="col-6 col-lg-2">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="coming-soon.html">Events</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-lg-3">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="service-details.html">Roof Installation</a></li>
-                        <li><a href="service-details.html">Roof Repair</a></li>
-                        <li><a href="service-details.html">Preventive Maintenance</a></li>
-                        <li><a href="service-details.html">Emergency Repairs</a></li>
-                        <li><a href="service-details.html">Drone Inspections</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3">
-                    <h4 class="footer-title">Contact Info</h4>
-                    <ul class="footer-links">
-                        <li class="d-flex align-items-start gap-3">
-                            <i class="bi bi-geo-alt text-primary"></i>
-                            <span>123 Business Ave, Suite 100<br>City, State 12345</span>
-                        </li>
-                        <li class="d-flex align-items-center gap-3">
-                            <i class="bi bi-telephone text-primary"></i>
-                            <a href="tel:+15551234567">+1 (555) 123-4567</a>
-                        </li>
-                        <li class="d-flex align-items-center gap-3">
-                            <i class="bi bi-envelope text-primary"></i>
-                            <a href="mailto:info@roofpro.com">info@roofpro.com</a>
-                        </li>
-                        <li class="d-flex align-items-center gap-3">
-                            <i class="bi bi-clock text-primary"></i>
-                            <span>Mon-Fri: 8AM - 6PM</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-                    <p class="mb-0 text-center text-md-start">&copy; 2024 RoofPro. All rights reserved. |
-                        <a href="#">Privacy Policy</a> |
-                        <a href="#">Terms of Service</a>
-                    </p>
-                    <p class="mb-0 text-center text-md-end">
-                        Powered by <a href="https://www.abhivorn.com/" target="_blank">AbhiVorn Technologies Pvt.
-                            Ltd.</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <a href="#" id="back-to-top" class="btn btn-primary btn-icon position-fixed bottom-0 end-0 m-4"
-        style="display: none; z-index: 1000;" aria-label="Back to top">
-        <i class="bi bi-arrow-up"></i>
-    </a>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/main.js"></script>
 </body>
 
 </html>

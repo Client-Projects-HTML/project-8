@@ -38,15 +38,35 @@
     <a href="#main-content" class="visually-hidden-focusable btn btn-primary position-absolute top-0 start-0 m-2"
         style="z-index: 9999;">Skip to main content</a>
 
-    <!-- Header -->
-    <header class="navbar navbar-expand-lg navbar-light fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm py-3" id="main-nav">
         <div class="container">
-            <a class="navbar-brand" href="index.html" aria-label="Go to homepage">
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <div class="hamburger-toggle"><span class="bar"></span><span class="bar"></span><span
+                        class="bar"></span></div>
+            </button>
+
+            <a class="navbar-brand me-auto" href="index.html" aria-label="Go to homepage">
                 <i class="bi bi-building"></i>
                 <span>RoofPro</span>
             </a>
 
-            <div class="d-flex align-items-center gap-2 ms-auto me-2 me-lg-0 order-lg-3">
+            <div class="d-flex align-items-center gap-1 gap-sm-2 ms-auto order-lg-3">
+                <div class="btn-group d-lg-none">
+                    <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+                    <button type="button" class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow">
+                        <li><a class="dropdown-item" href="client-dashboard/index.html"><i
+                                    class="bi bi-person me-2 text-primary"></i>Client Dashboard</a></li>
+                        <li><a class="dropdown-item" href="admin-dashboard/index.html"><i
+                                    class="bi bi-shield-lock me-2 text-primary"></i>Admin Dashboard</a></li>
+                    </ul>
+                </div>
                 <button class="btn btn-icon btn-outline-secondary" id="rtl-toggle" aria-label="Toggle RTL mode"
                     title="RTL Mode">
                     <i class="bi bi-translate"></i>
@@ -56,12 +76,6 @@
                     <i class="bi bi-moon-fill"></i>
                 </button>
             </div>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <div class="hamburger-toggle"><span class="bar"></span><span class="bar"></span><span
-                        class="bar"></span></div>
-            </button>
 
             <div class="offcanvas offcanvas-start mobile-sidebar-menu" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
@@ -116,11 +130,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
-                        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                            <div class="btn-group me-2 w-100 w-lg-auto">
-                                <a href="login.html" class="btn btn-outline-primary">Login</a>
+                        <li class="nav-item ms-lg-3 mt-3 mt-lg-0 d-lg-flex align-items-center gap-2">
+                            <div class="btn-group w-100 w-lg-auto d-none d-lg-flex">
+                                <a href="login.html" class="btn btn-outline-primary btn-sm">Login</a>
                                 <button type="button"
-                                    class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                    class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split btn-sm"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="visually-hidden">Toggle Dropdown</span>
                                 </button>
@@ -131,7 +145,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a class="btn btn-primary w-100 w-lg-auto mt-2 mt-lg-0" href="signup.html">
+                            <a class="btn btn-primary w-100 w-lg-auto mt-2 mt-lg-0 btn-sm" href="signup.html">
                                 Sign Up
                             </a>
                         </li>
@@ -139,545 +153,552 @@
                 </div>
             </div>
         </div>
-    </header>
+        </header>
 
-    <main id="main-content">
+        <main id="main-content">
 
-        <!-- Main Services Section -->
-        <section class="section pt-5 pb-5" aria-label="Main Services">
-            <div class="container">
-                <div class="section-title">
-                    <h2>What We Offer</h2>
-                    <p>From installation to emergency repairs, we've got you covered</p>
-                </div>
-
-                <div class="row g-4">
-                    <!-- Service 1 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card h-100 overflow-hidden d-flex flex-column">
-                            <div class="service-image">
-                                <img src="assets/images/services/installation.png" alt="Roof Installation"
-                                    class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            </div>
-                            <div class="p-4 d-flex flex-column flex-grow-1">
-                                <div class="service-icon mb-3">
-                                    <i class="bi bi-tools fs-2"></i>
-                                </div>
-                                <h3>Roof Installation</h3>
-                                <p>Expert installation of all commercial roofing systems including TPO, EPDM, PVC,
-                                    metal,
-                                    and modified bitumen roofs.</p>
-                                <ul class="mb-4 text-start">
-                                    <li><i class="bi bi-check text-success me-2"></i>New construction</li>
-                                    <li><i class="bi bi-check text-success me-2"></i>Complete replacements</li>
-                                    <li><i class="bi bi-check text-success me-2"></i>All roof types</li>
-                                </ul>
-                                <a href="service-details.html?service=installation"
-                                    class="btn btn-outline-primary mt-auto">
-                                    Learn More
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
+            <!-- Main Services Section -->
+            <section class="section pt-5 pb-5" aria-label="Main Services">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>What We Offer</h2>
+                        <p>From installation to emergency repairs, we've got you covered</p>
                     </div>
 
-                    <!-- Service 2 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card h-100 overflow-hidden d-flex flex-column">
-                            <div class="service-image">
-                                <img src="assets/images/services/repair.png" alt="Roof Repair" class="img-fluid w-100"
-                                    style="height: 200px; object-fit: cover;">
-                            </div>
-                            <div class="p-4 d-flex flex-column flex-grow-1">
-                                <div class="service-icon mb-3">
-                                    <i class="bi bi-wrench-adjustable fs-2"></i>
+                    <div class="row g-4">
+                        <!-- Service 1 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="service-card h-100 overflow-hidden d-flex flex-column">
+                                <div class="service-image">
+                                    <img src="assets/images/services/installation.png" alt="Roof Installation"
+                                        class="img-fluid w-100" style="height: 200px; object-fit: cover;">
                                 </div>
-                                <h3>Roof Repair</h3>
-                                <p>Fast and effective repair services for all types of commercial roof damage, leaks,
-                                    and
-                                    wear issues.</p>
-                                <ul class="mb-4 text-start">
-                                    <li><i class="bi bi-check text-success me-2"></i>Leak detection & repair</li>
-                                    <li><i class="bi bi-check text-success me-2"></i>Storm damage repair</li>
-                                    <li><i class="bi bi-check text-success me-2"></i>Patch work</li>
-                                </ul>
-                                <a href="service-details.html?service=repair" class="btn btn-outline-primary mt-auto">
-                                    Learn More
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
+                                <div class="p-4 d-flex flex-column flex-grow-1">
+                                    <div class="service-icon mb-3">
+                                        <i class="bi bi-tools fs-2"></i>
+                                    </div>
+                                    <h3>Roof Installation</h3>
+                                    <p>Expert installation of all commercial roofing systems including TPO, EPDM, PVC,
+                                        metal,
+                                        and modified bitumen roofs.</p>
+                                    <ul class="mb-4 text-start">
+                                        <li><i class="bi bi-check text-success me-2"></i>New construction</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>Complete replacements</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>All roof types</li>
+                                    </ul>
+                                    <a href="service-details.html?service=installation"
+                                        class="btn btn-outline-primary mt-auto">
+                                        Learn More
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Service 3 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card h-100 overflow-hidden d-flex flex-column">
-                            <div class="service-image">
-                                <img src="assets/images/services/maintenance.png" alt="Preventive Maintenance"
-                                    class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            </div>
-                            <div class="p-4 d-flex flex-column flex-grow-1">
-                                <div class="service-icon mb-3">
-                                    <i class="bi bi-calendar-check fs-2"></i>
+                        <!-- Service 2 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="service-card h-100 overflow-hidden d-flex flex-column">
+                                <div class="service-image">
+                                    <img src="assets/images/services/repair.png" alt="Roof Repair"
+                                        class="img-fluid w-100" style="height: 200px; object-fit: cover;">
                                 </div>
-                                <h3>Preventive Maintenance</h3>
-                                <p>Regular maintenance programs designed to extend your roof's lifespan and prevent
-                                    costly
-                                    repairs.</p>
-                                <ul class="mb-4 text-start">
-                                    <li><i class="bi bi-check text-success me-2"></i>Scheduled inspections</li>
-                                    <li><i class="bi bi-check text-success me-2"></i>Cleaning services</li>
-                                    <li><i class="bi bi-check text-success me-2"></i>Priority scheduling</li>
-                                </ul>
-                                <a href="service-details.html?service=maintenance"
-                                    class="btn btn-outline-primary mt-auto">
-                                    Learn More
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
+                                <div class="p-4 d-flex flex-column flex-grow-1">
+                                    <div class="service-icon mb-3">
+                                        <i class="bi bi-wrench-adjustable fs-2"></i>
+                                    </div>
+                                    <h3>Roof Repair</h3>
+                                    <p>Fast and effective repair services for all types of commercial roof damage,
+                                        leaks,
+                                        and
+                                        wear issues.</p>
+                                    <ul class="mb-4 text-start">
+                                        <li><i class="bi bi-check text-success me-2"></i>Leak detection & repair</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>Storm damage repair</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>Patch work</li>
+                                    </ul>
+                                    <a href="service-details.html?service=repair"
+                                        class="btn btn-outline-primary mt-auto">
+                                        Learn More
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Service 4 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card h-100 overflow-hidden d-flex flex-column">
-                            <div class="service-image">
-                                <img src="assets/images/services/emergency.png" alt="Emergency Repairs"
-                                    class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            </div>
-                            <div class="p-4 d-flex flex-column flex-grow-1">
-                                <div class="service-icon mb-3">
-                                    <i class="bi bi-exclamation-triangle fs-2"></i>
+                        <!-- Service 3 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="service-card h-100 overflow-hidden d-flex flex-column">
+                                <div class="service-image">
+                                    <img src="assets/images/services/maintenance.png" alt="Preventive Maintenance"
+                                        class="img-fluid w-100" style="height: 200px; object-fit: cover;">
                                 </div>
-                                <h3>Emergency Repairs</h3>
-                                <p>24/7 emergency response for urgent roofing issues. We respond quickly to protect your
-                                    business.</p>
-                                <ul class="mb-4 text-start">
-                                    <li><i class="bi bi-check text-success me-2"></i>24/7 availability</li>
-                                    <li><i class="bi bi-check text-success me-2"></i>Fast response time</li>
-                                    <li><i class="bi bi-check text-success me-2"></i>Temporary fixes</li>
-                                </ul>
-                                <a href="service-details.html?service=emergency"
-                                    class="btn btn-outline-primary mt-auto">
-                                    Learn More
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
+                                <div class="p-4 d-flex flex-column flex-grow-1">
+                                    <div class="service-icon mb-3">
+                                        <i class="bi bi-calendar-check fs-2"></i>
+                                    </div>
+                                    <h3>Preventive Maintenance</h3>
+                                    <p>Regular maintenance programs designed to extend your roof's lifespan and prevent
+                                        costly
+                                        repairs.</p>
+                                    <ul class="mb-4 text-start">
+                                        <li><i class="bi bi-check text-success me-2"></i>Scheduled inspections</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>Cleaning services</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>Priority scheduling</li>
+                                    </ul>
+                                    <a href="service-details.html?service=maintenance"
+                                        class="btn btn-outline-primary mt-auto">
+                                        Learn More
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Service 5 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card h-100 overflow-hidden d-flex flex-column">
-                            <div class="service-image">
-                                <img src="assets/images/services/drone.png" alt="Drone Inspections"
-                                    class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            </div>
-                            <div class="p-4 d-flex flex-column flex-grow-1">
-                                <div class="service-icon mb-3">
-                                    <i class="bi bi-search fs-2"></i>
+                        <!-- Service 4 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="service-card h-100 overflow-hidden d-flex flex-column">
+                                <div class="service-image">
+                                    <img src="assets/images/services/emergency.png" alt="Emergency Repairs"
+                                        class="img-fluid w-100" style="height: 200px; object-fit: cover;">
                                 </div>
-                                <h3>Drone Inspections</h3>
-                                <p>State-of-the-art aerial inspections using drone technology for comprehensive roof
-                                    assessments.</p>
-                                <ul class="mb-4 text-start">
-                                    <li><i class="bi bi-check text-success me-2"></i>High-resolution imagery</li>
-                                    <li><i class="bi bi-check text-success me-2"></i>Hard-to-reach areas</li>
-                                    <li><i class="bi bi-check text-success me-2"></i>Detailed reports</li>
-                                </ul>
-                                <a href="service-details.html?service=drone" class="btn btn-outline-primary mt-auto">
-                                    Learn More
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
+                                <div class="p-4 d-flex flex-column flex-grow-1">
+                                    <div class="service-icon mb-3">
+                                        <i class="bi bi-exclamation-triangle fs-2"></i>
+                                    </div>
+                                    <h3>Emergency Repairs</h3>
+                                    <p>24/7 emergency response for urgent roofing issues. We respond quickly to protect
+                                        your
+                                        business.</p>
+                                    <ul class="mb-4 text-start">
+                                        <li><i class="bi bi-check text-success me-2"></i>24/7 availability</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>Fast response time</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>Temporary fixes</li>
+                                    </ul>
+                                    <a href="service-details.html?service=emergency"
+                                        class="btn btn-outline-primary mt-auto">
+                                        Learn More
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Service 6 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="service-card h-100 overflow-hidden d-flex flex-column">
-                            <div class="service-image">
-                                <img src="assets/images/services/warranty.png" alt="Warranty Services"
-                                    class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            </div>
-                            <div class="p-4 d-flex flex-column flex-grow-1">
-                                <div class="service-icon mb-3">
-                                    <i class="bi bi-file-earmark-text fs-2"></i>
+                        <!-- Service 5 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="service-card h-100 overflow-hidden d-flex flex-column">
+                                <div class="service-image">
+                                    <img src="assets/images/services/drone.png" alt="Drone Inspections"
+                                        class="img-fluid w-100" style="height: 200px; object-fit: cover;">
                                 </div>
-                                <h3>Warranty Services</h3>
-                                <p>Comprehensive warranty options and support for all our roofing installations and
-                                    repairs.
-                                </p>
-                                <ul class="mb-4 text-start">
-                                    <li><i class="bi bi-check text-success me-2"></i>Extended warranties</li>
-                                    <li><i class="bi bi-check text-success me-2"></i>Transferable options</li>
-                                    <li><i class="bi bi-check text-success me-2"></i>Certificate issuance</li>
-                                </ul>
-                                <a href="service-details.html?service=warranty" class="btn btn-outline-primary mt-auto">
-                                    Learn More
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Roofing Types Section -->
-        <section class="section bg-light" aria-label="Roofing Types">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Roofing Systems We Install</h2>
-                    <p>Expert installation of all major commercial roofing systems</p>
-                </div>
-
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body text-center p-5">
-                                <div class="mb-3 d-flex justify-content-center">
-                                    <img src="https://loremflickr.com/200/200/roofing,white?lock=1" alt="TPO Roofing"
-                                        class="img-fluid rounded-circle" width="80" height="80"
-                                        style="object-fit: cover;">
+                                <div class="p-4 d-flex flex-column flex-grow-1">
+                                    <div class="service-icon mb-3">
+                                        <i class="bi bi-search fs-2"></i>
+                                    </div>
+                                    <h3>Drone Inspections</h3>
+                                    <p>State-of-the-art aerial inspections using drone technology for comprehensive roof
+                                        assessments.</p>
+                                    <ul class="mb-4 text-start">
+                                        <li><i class="bi bi-check text-success me-2"></i>High-resolution imagery</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>Hard-to-reach areas</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>Detailed reports</li>
+                                    </ul>
+                                    <a href="service-details.html?service=drone"
+                                        class="btn btn-outline-primary mt-auto">
+                                        Learn More
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
                                 </div>
-                                <h4>TPO Roofing</h4>
-                                <p class="text-muted mb-3">
-                                    Thermoplastic Polyolefin single-ply membrane. Energy-efficient and cost-effective.
-                                </p>
-                                <span class="badge bg-success">Popular Choice</span>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body text-center p-5">
-                                <div class="mb-3 d-flex justify-content-center">
-                                    <img src="https://loremflickr.com/200/200/roofing,black?lock=2" alt="EPDM Roofing"
-                                        class="img-fluid rounded-circle" width="80" height="80"
-                                        style="object-fit: cover;">
+                        <!-- Service 6 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="service-card h-100 overflow-hidden d-flex flex-column">
+                                <div class="service-image">
+                                    <img src="assets/images/services/warranty.png" alt="Warranty Services"
+                                        class="img-fluid w-100" style="height: 200px; object-fit: cover;">
                                 </div>
-                                <h4>EPDM Roofing</h4>
-                                <p class="text-muted mb-3">
-                                    Ethylene Propylene Diene Monomer rubber membrane. Durable and weather-resistant.
-                                </p>
-                                <span class="badge bg-info">Long-Lasting</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body text-center p-5">
-                                <div class="mb-3 d-flex justify-content-center">
-                                    <img src="https://loremflickr.com/200/200/roofing,metal?lock=3" alt="Metal Roofing"
-                                        class="img-fluid rounded-circle" width="80" height="80"
-                                        style="object-fit: cover;">
+                                <div class="p-4 d-flex flex-column flex-grow-1">
+                                    <div class="service-icon mb-3">
+                                        <i class="bi bi-file-earmark-text fs-2"></i>
+                                    </div>
+                                    <h3>Warranty Services</h3>
+                                    <p>Comprehensive warranty options and support for all our roofing installations and
+                                        repairs.
+                                    </p>
+                                    <ul class="mb-4 text-start">
+                                        <li><i class="bi bi-check text-success me-2"></i>Extended warranties</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>Transferable options</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>Certificate issuance</li>
+                                    </ul>
+                                    <a href="service-details.html?service=warranty"
+                                        class="btn btn-outline-primary mt-auto">
+                                        Learn More
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
                                 </div>
-                                <h4>Metal Roofing</h4>
-                                <p class="text-muted mb-3">
-                                    Steel, aluminum, or copper panels. Classic look with modern performance.
-                                </p>
-                                <span class="badge bg-warning">Premium</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body text-center p-5">
-                                <div class="mb-3 d-flex justify-content-center">
-                                    <img src="https://loremflickr.com/200/200/roofing,pvc?lock=4" alt="PVC Roofing"
-                                        class="img-fluid rounded-circle" width="80" height="80"
-                                        style="object-fit: cover;">
-                                </div>
-                                <h4>PVC Roofing</h4>
-                                <p class="text-muted mb-3">
-                                    Polyvinyl Chloride membrane. Excellent chemical resistance and durability.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body text-center p-5">
-                                <div class="mb-3 d-flex justify-content-center">
-                                    <img src="https://loremflickr.com/200/200/asphalt,texture?lock=5"
-                                        alt="Modified Bitumen" class="img-fluid rounded-circle" width="80" height="80"
-                                        style="object-fit: cover;">
-                                </div>
-                                <h4>Modified Bitumen</h4>
-                                <p class="text-muted mb-3">
-                                    Asphalt-based membrane with polymer modifiers. Proven performance for decades.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body text-center p-5">
-                                <div class="mb-3 d-flex justify-content-center">
-                                    <img src="https://loremflickr.com/200/200/roofing,green,grass?lock=6"
-                                        alt="Green Roofing" class="img-fluid rounded-circle" width="80" height="80"
-                                        style="object-fit: cover;">
-                                </div>
-                                <h4>Green Roofing</h4>
-                                <p class="text-muted mb-3">
-                                    Vegetative roof systems. Eco-friendly and energy-efficient.
-                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Process Section -->
-        <section class="section" aria-label="Our Process">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Our Process</h2>
-                    <p>Simple, transparent, and efficient from start to finish</p>
-                </div>
+            <!-- Roofing Types Section -->
+            <section class="section bg-light" aria-label="Roofing Types">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Roofing Systems We Install</h2>
+                        <p>Expert installation of all major commercial roofing systems</p>
+                    </div>
 
-                <div class="row g-4">
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                                style="width: 80px; height: 80px;">
-                                <span class="fs-3 fw-bold">1</span>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-5">
+                                    <div class="mb-3 d-flex justify-content-center">
+                                        <img src="https://loremflickr.com/200/200/roofing,white?lock=1"
+                                            alt="TPO Roofing" class="img-fluid rounded-circle" width="80" height="80"
+                                            style="object-fit: cover;">
+                                    </div>
+                                    <h4>TPO Roofing</h4>
+                                    <p class="text-muted mb-3">
+                                        Thermoplastic Polyolefin single-ply membrane. Energy-efficient and
+                                        cost-effective.
+                                    </p>
+                                    <span class="badge bg-success">Popular Choice</span>
+                                </div>
                             </div>
-                            <h4>Consultation</h4>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-5">
+                                    <div class="mb-3 d-flex justify-content-center">
+                                        <img src="https://loremflickr.com/200/200/roofing,black?lock=2"
+                                            alt="EPDM Roofing" class="img-fluid rounded-circle" width="80" height="80"
+                                            style="object-fit: cover;">
+                                    </div>
+                                    <h4>EPDM Roofing</h4>
+                                    <p class="text-muted mb-3">
+                                        Ethylene Propylene Diene Monomer rubber membrane. Durable and weather-resistant.
+                                    </p>
+                                    <span class="badge bg-info">Long-Lasting</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-5">
+                                    <div class="mb-3 d-flex justify-content-center">
+                                        <img src="https://loremflickr.com/200/200/roofing,metal?lock=3"
+                                            alt="Metal Roofing" class="img-fluid rounded-circle" width="80" height="80"
+                                            style="object-fit: cover;">
+                                    </div>
+                                    <h4>Metal Roofing</h4>
+                                    <p class="text-muted mb-3">
+                                        Steel, aluminum, or copper panels. Classic look with modern performance.
+                                    </p>
+                                    <span class="badge bg-warning">Premium</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-5">
+                                    <div class="mb-3 d-flex justify-content-center">
+                                        <img src="https://loremflickr.com/200/200/roofing,pvc?lock=4" alt="PVC Roofing"
+                                            class="img-fluid rounded-circle" width="80" height="80"
+                                            style="object-fit: cover;">
+                                    </div>
+                                    <h4>PVC Roofing</h4>
+                                    <p class="text-muted mb-3">
+                                        Polyvinyl Chloride membrane. Excellent chemical resistance and durability.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-5">
+                                    <div class="mb-3 d-flex justify-content-center">
+                                        <img src="https://loremflickr.com/200/200/asphalt,texture?lock=5"
+                                            alt="Modified Bitumen" class="img-fluid rounded-circle" width="80"
+                                            height="80" style="object-fit: cover;">
+                                    </div>
+                                    <h4>Modified Bitumen</h4>
+                                    <p class="text-muted mb-3">
+                                        Asphalt-based membrane with polymer modifiers. Proven performance for decades.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-5">
+                                    <div class="mb-3 d-flex justify-content-center">
+                                        <img src="https://loremflickr.com/200/200/roofing,green,grass?lock=6"
+                                            alt="Green Roofing" class="img-fluid rounded-circle" width="80" height="80"
+                                            style="object-fit: cover;">
+                                    </div>
+                                    <h4>Green Roofing</h4>
+                                    <p class="text-muted mb-3">
+                                        Vegetative roof systems. Eco-friendly and energy-efficient.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section class="section" aria-label="Our Process">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Our Process</h2>
+                        <p>Simple, transparent, and efficient from start to finish</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                    style="width: 80px; height: 80px;">
+                                    <span class="fs-3 fw-bold">1</span>
+                                </div>
+                                <h4>Consultation</h4>
+                                <p class="text-muted mb-0">
+                                    Free on-site consultation to assess your needs and discuss options.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                    style="width: 80px; height: 80px;">
+                                    <span class="fs-3 fw-bold">2</span>
+                                </div>
+                                <h4>Proposal</h4>
+                                <p class="text-muted mb-0">
+                                    Detailed proposal with transparent pricing and project timeline.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                    style="width: 80px; height: 80px;">
+                                    <span class="fs-3 fw-bold">3</span>
+                                </div>
+                                <h4>Installation</h4>
+                                <p class="text-muted mb-0">
+                                    Professional installation by certified technicians with minimal disruption.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                    style="width: 80px; height: 80px;">
+                                    <span class="fs-3 fw-bold">4</span>
+                                </div>
+                                <h4>Support</h4>
+                                <p class="text-muted mb-0">
+                                    Ongoing support, maintenance plans, and warranty service.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Us Section -->
+            <section class="section bg-primary text-white" aria-label="Why Choose Us">
+                <div class="container">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-6">
+                            <h2 class="mb-4">Why Choose RoofPro?</h2>
+                            <p class="opacity-75 mb-4">
+                                With over 20 years of experience in commercial roofing, we deliver quality results
+                                that businesses trust. Here's what sets us apart:
+                            </p>
+
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-check-circle text-accent fs-5"></i>
+                                        <span>Licensed & Insured</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-check-circle text-accent fs-5"></i>
+                                        <span>Certified Installers</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-check-circle text-accent fs-5"></i>
+                                        <span>Quality Materials</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-check-circle text-accent fs-5"></i>
+                                        <span>On-Time Delivery</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-check-circle text-accent fs-5"></i>
+                                        <span>24/7 Support</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <i class="bi bi-check-circle text-accent fs-5"></i>
+                                        <span>Warranty Backed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <img src="assets/images/services/installation.png" alt="Professional roofing team at work"
+                                class="img-fluid rounded-lg shadow-lg" width="600" height="400">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="section" aria-label="Call to Action">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-lg-8">
+                            <h2 class="mb-3">Need a Free Quote?</h2>
                             <p class="text-muted mb-0">
-                                Free on-site consultation to assess your needs and discuss options.
+                                Contact us today for a free consultation and estimate on your commercial roofing
+                                project.
                             </p>
                         </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                                style="width: 80px; height: 80px;">
-                                <span class="fs-3 fw-bold">2</span>
-                            </div>
-                            <h4>Proposal</h4>
-                            <p class="text-muted mb-0">
-                                Detailed proposal with transparent pricing and project timeline.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                                style="width: 80px; height: 80px;">
-                                <span class="fs-3 fw-bold">3</span>
-                            </div>
-                            <h4>Installation</h4>
-                            <p class="text-muted mb-0">
-                                Professional installation by certified technicians with minimal disruption.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="text-center">
-                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
-                                style="width: 80px; height: 80px;">
-                                <span class="fs-3 fw-bold">4</span>
-                            </div>
-                            <h4>Support</h4>
-                            <p class="text-muted mb-0">
-                                Ongoing support, maintenance plans, and warranty service.
-                            </p>
+                        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                            <a href="contact.html" class="btn btn-primary btn-lg">
+                                Get Free Quote
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <!-- Why Choose Us Section -->
-        <section class="section bg-primary text-white" aria-label="Why Choose Us">
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
             <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-6">
-                        <h2 class="mb-4">Why Choose RoofPro?</h2>
-                        <p class="opacity-75 mb-4">
-                            With over 20 years of experience in commercial roofing, we deliver quality results
-                            that businesses trust. Here's what sets us apart:
+                <div class="row g-5">
+                    <div class="col-lg-4">
+                        <a class="footer-brand d-flex align-items-center gap-2 mb-4" href="index.html">
+                            <i class="bi bi-building"></i>
+                            <span>RoofPro</span>
+                        </a>
+                        <p class="text-secondary mb-4">
+                            Professional commercial roofing services backed by 20+ years of experience.
+                            Quality installations, repairs, and maintenance for businesses.
                         </p>
-
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <div class="d-flex align-items-center gap-3">
-                                    <i class="bi bi-check-circle text-accent fs-5"></i>
-                                    <span>Licensed & Insured</span>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center gap-3">
-                                    <i class="bi bi-check-circle text-accent fs-5"></i>
-                                    <span>Certified Installers</span>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center gap-3">
-                                    <i class="bi bi-check-circle text-accent fs-5"></i>
-                                    <span>Quality Materials</span>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center gap-3">
-                                    <i class="bi bi-check-circle text-accent fs-5"></i>
-                                    <span>On-Time Delivery</span>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center gap-3">
-                                    <i class="bi bi-check-circle text-accent fs-5"></i>
-                                    <span>24/7 Support</span>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center gap-3">
-                                    <i class="bi bi-check-circle text-accent fs-5"></i>
-                                    <span>Warranty Backed</span>
-                                </div>
-                            </div>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Twitter">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
-                        <img src="assets/images/services/installation.png" alt="Professional roofing team at work"
-                            class="img-fluid rounded-lg shadow-lg" width="600" height="400">
+                    <div class="col-6 col-lg-2">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="coming-soon.html">Events</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <h4 class="footer-title">Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="service-details.html">Roof Installation</a></li>
+                            <li><a href="service-details.html">Roof Repair</a></li>
+                            <li><a href="service-details.html">Preventive Maintenance</a></li>
+                            <li><a href="service-details.html">Emergency Repairs</a></li>
+                            <li><a href="service-details.html">Drone Inspections</a></li>
+                        </ul>
+                        <li><a href="404.html">Events</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <h4 class="footer-title">Contact Info</h4>
+                        <ul class="footer-links">
+                            <li class="d-flex align-items-start gap-3">
+                                <i class="bi bi-geo-alt text-primary"></i>
+                                <span>123 Business Ave, Suite 100<br>City, State 12345</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-3">
+                                <i class="bi bi-telephone text-primary"></i>
+                                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                            </li>
+                            <li class="d-flex align-items-center gap-3">
+                                <i class="bi bi-envelope text-primary"></i>
+                                <a href="mailto:info@roofpro.com">info@roofpro.com</a>
+                            </li>
+                            <li class="d-flex align-items-center gap-3">
+                                <i class="bi bi-clock text-primary"></i>
+                                <span>Mon-Fri: 8AM - 6PM</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- CTA Section -->
-        <section class="section" aria-label="Call to Action">
-            <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-8">
-                        <h2 class="mb-3">Need a Free Quote?</h2>
-                        <p class="text-muted mb-0">
-                            Contact us today for a free consultation and estimate on your commercial roofing project.
+                <div class="footer-bottom">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                        <p class="mb-0 text-center text-md-start">&copy; 2024 RoofPro. All rights reserved. |
+                            <a href="#">Privacy Policy</a> |
+                            <a href="#">Terms of Service</a>
+                        </p>
+                        <p class="mb-0 text-center text-md-end">
+                            Powered by <a href="https://www.abhivorn.com/" target="_blank">AbhiVorn Technologies Pvt.
+                                Ltd.</a>
                         </p>
                     </div>
-                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                        <a href="contact.html" class="btn btn-primary btn-lg">
-                            Get Free Quote
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </footer>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <a class="footer-brand d-flex align-items-center gap-2 mb-4" href="index.html">
-                        <i class="bi bi-building"></i>
-                        <span>RoofPro</span>
-                    </a>
-                    <p class="text-secondary mb-4">
-                        Professional commercial roofing services backed by 20+ years of experience.
-                        Quality installations, repairs, and maintenance for businesses.
-                    </p>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Facebook">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                        <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Twitter">
-                            <i class="bi bi-twitter-x"></i>
-                        </a>
-                        <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="LinkedIn">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                        <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Instagram">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                    </div>
-                </div>
+        <a href="#" id="back-to-top" class="btn btn-primary btn-icon position-fixed bottom-0 end-0 m-4"
+            style="display: none; z-index: 1000;" aria-label="Back to top">
+            <i class="bi bi-arrow-up"></i>
+        </a>
 
-                <div class="col-6 col-lg-2">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="coming-soon.html">Events</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-lg-3">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="service-details.html">Roof Installation</a></li>
-                        <li><a href="service-details.html">Roof Repair</a></li>
-                        <li><a href="service-details.html">Preventive Maintenance</a></li>
-                        <li><a href="service-details.html">Emergency Repairs</a></li>
-                        <li><a href="service-details.html">Drone Inspections</a></li>
-                    </ul>
-                    <li><a href="404.html">Events</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3">
-                    <h4 class="footer-title">Contact Info</h4>
-                    <ul class="footer-links">
-                        <li class="d-flex align-items-start gap-3">
-                            <i class="bi bi-geo-alt text-primary"></i>
-                            <span>123 Business Ave, Suite 100<br>City, State 12345</span>
-                        </li>
-                        <li class="d-flex align-items-center gap-3">
-                            <i class="bi bi-telephone text-primary"></i>
-                            <a href="tel:+15551234567">+1 (555) 123-4567</a>
-                        </li>
-                        <li class="d-flex align-items-center gap-3">
-                            <i class="bi bi-envelope text-primary"></i>
-                            <a href="mailto:info@roofpro.com">info@roofpro.com</a>
-                        </li>
-                        <li class="d-flex align-items-center gap-3">
-                            <i class="bi bi-clock text-primary"></i>
-                            <span>Mon-Fri: 8AM - 6PM</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-                    <p class="mb-0 text-center text-md-start">&copy; 2024 RoofPro. All rights reserved. |
-                        <a href="#">Privacy Policy</a> |
-                        <a href="#">Terms of Service</a>
-                    </p>
-                    <p class="mb-0 text-center text-md-end">
-                        Powered by <a href="https://www.abhivorn.com/" target="_blank">AbhiVorn Technologies Pvt.
-                            Ltd.</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <a href="#" id="back-to-top" class="btn btn-primary btn-icon position-fixed bottom-0 end-0 m-4"
-        style="display: none; z-index: 1000;" aria-label="Back to top">
-        <i class="bi bi-arrow-up"></i>
-    </a>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/main.js"></script>
 </body>
 
 </html>

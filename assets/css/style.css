@@ -941,6 +941,8 @@ textarea {
     display: flex;
     align-items: center;
     padding: var(--space-8) 0;
+    z-index: 1;
+    /* Was 1020, causing overlap with sticky header dropdowns */
     background: radial-gradient(circle at top right, var(--primary-light), transparent),
         linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
     color: var(--white);
@@ -1046,6 +1048,48 @@ textarea {
 
     100% {
         transform: translateY(0px) translateX(0px);
+    }
+}
+
+/* Mobile Hero Card Optimization */
+@media (max-width: 576px) {
+    .floating-card {
+        padding: 0.75rem !important;
+        max-width: 180px !important;
+    }
+
+    .floating-card p {
+        font-size: 0.85rem !important;
+    }
+
+    .floating-card h3 {
+        font-size: 1.15rem !important;
+    }
+
+    .floating-card small {
+        font-size: 0.75rem !important;
+    }
+
+    .floating-card i {
+        font-size: 1.25rem !important;
+    }
+
+    .floating-card .bg-primary,
+    .floating-card .bg-success,
+    .floating-card .bg-warning {
+        padding: 0.5rem !important;
+    }
+
+    /* Override inline negative offsets to prevent overflow */
+    .hero-image .floating-card {
+        left: 10px !important;
+        right: 10px !important;
+        margin: 0 !important;
+    }
+
+    /* Specifically handle index-2 hero which has a larger image */
+    .hero-image-container img {
+        height: 350px !important;
     }
 }
 
@@ -1455,7 +1499,7 @@ textarea {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--gray-800) !important;
+    color: var(--primary-color) !important;
     margin-bottom: var(--space-2);
     display: flex;
     align-items: center;
@@ -1906,4 +1950,74 @@ textarea {
 
 .header-profile-btn:hover img {
     border-color: var(--primary-color);
+}
+
+/* ==========================================================================
+   Mobile Header Optimization Overrides
+   ========================================================================== */
+@media (max-width: 991.98px) {
+    .navbar .btn-icon {
+        width: 30px !important;
+        height: 30px !important;
+        padding: 0 !important;
+        font-size: 0.8rem !important;
+    }
+
+    .navbar .btn-group .btn-sm {
+        padding: 0.2rem 0.4rem !important;
+        font-size: 0.7rem !important;
+    }
+
+    .navbar .dropdown-toggle-split {
+        padding-right: 0.3rem !important;
+        padding-left: 0.3rem !important;
+    }
+
+    .navbar .d-flex.align-items-center.gap-1 {
+        gap: 0.15rem !important;
+    }
+
+    .navbar-toggler {
+        width: 32px !important;
+        height: 32px !important;
+        padding: 0 !important;
+        margin-right: 0.5rem !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--gray-200) !important;
+        border-radius: var(--radius-sm) !important;
+    }
+
+    .hamburger-toggle {
+        width: 18px !important;
+        height: 12px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hamburger-toggle .bar {
+        width: 100% !important;
+        height: 2px !important;
+        background-color: var(--gray-600) !important;
+        border-radius: 1px;
+        margin: 0 !important;
+    }
+
+    .navbar-brand {
+        font-size: 1.15rem !important;
+    }
+
+    .navbar-brand i {
+        font-size: 1.1rem !important;
+    }
+
+    /* Disable jump effect on mobile header buttons */
+    .navbar .btn:hover,
+    .navbar .btn:focus,
+    .navbar .btn:active {
+        transform: none !important;
+        box-shadow: none !important;
+    }
 }

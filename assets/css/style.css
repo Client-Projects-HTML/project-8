@@ -684,9 +684,9 @@ textarea {
     z-index: var(--z-sticky);
 }
 
-/* Add top spacing only on pages that include the fixed top navbar */
-body:has(#main-nav),
-body:has(#main-header) {
+/* Add top spacing below fixed top navbar in a browser-compatible way */
+#main-nav + main,
+#main-header + main {
     padding-top: 92px;
 }
 
@@ -2030,8 +2030,8 @@ body:has(#main-header) {
         font-size: 1.1rem !important;
     }
 
-    body:has(#main-nav),
-    body:has(#main-header) {
+    #main-nav + main,
+    #main-header + main {
         padding-top: 82px;
     }
 

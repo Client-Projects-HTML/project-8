@@ -673,6 +673,23 @@ textarea {
     z-index: var(--z-sticky);
 }
 
+/* Keep top marketing navbar fixed across pages */
+#main-nav.navbar,
+#main-header.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: var(--z-sticky);
+}
+
+/* Add top spacing only on pages that include the fixed top navbar */
+body:has(#main-nav),
+body:has(#main-header) {
+    padding-top: 92px;
+}
+
 [data-bs-theme="dark"] .navbar {
     background-color: var(--gray-800);
 }
@@ -2011,6 +2028,11 @@ textarea {
 
     .navbar-brand i {
         font-size: 1.1rem !important;
+    }
+
+    body:has(#main-nav),
+    body:has(#main-header) {
+        padding-top: 82px;
     }
 
     /* Disable jump effect on mobile header buttons */

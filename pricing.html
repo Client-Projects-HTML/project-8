@@ -63,6 +63,7 @@
                                     class="bi bi-shield-lock me-2 text-primary"></i>Admin Dashboard</a></li>
                     </ul>
                 </div>
+
                 <button class="btn btn-icon btn-outline-secondary" id="rtl-toggle" aria-label="Toggle RTL mode"
                     title="RTL Mode">
                     <i class="bi bi-translate"></i>
@@ -71,6 +72,23 @@
                     title="Dark Mode">
                     <i class="bi bi-moon-fill"></i>
                 </button>
+
+                <!-- Desktop Login/Sign Up -->
+                <div class="d-none d-lg-flex align-items-center gap-2">
+                    <div class="btn-group">
+                        <a href="login.html" class="btn btn-outline-primary btn-sm">Login</a>
+                        <button type="button"
+                            class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split btn-sm"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow">
+                            <li><a class="dropdown-item" href="client-dashboard/index.html">Client Dashboard</a></li>
+                            <li><a class="dropdown-item" href="admin-dashboard/index.html">Admin Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-primary btn-sm" href="signup.html">Sign Up</a>
+                </div>
             </div>
 
             <div class="offcanvas offcanvas-start mobile-sidebar-menu" tabindex="-1" id="offcanvasNavbar"
@@ -124,22 +142,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
-                        <li class="nav-item ms-lg-3 mt-3 mt-lg-0 d-lg-flex align-items-center gap-2">
-                            <div class="btn-group w-100 w-lg-auto d-none d-lg-flex">
-                                <a href="login.html" class="btn btn-outline-primary btn-sm">Login</a>
-                                <button type="button"
-                                    class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split btn-sm"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span class="visually-hidden">Toggle Dropdown</span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="client-dashboard/index.html">Client Dashboard</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="admin-dashboard/index.html">Admin Dashboard</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <a class="btn btn-primary w-100 w-lg-auto mt-2 mt-lg-0 btn-sm" href="signup.html">
+                        <li class="nav-item d-lg-none mt-3">
+                            <a class="btn btn-primary w-100 btn-sm" href="signup.html">
                                 Sign Up
                             </a>
                         </li>

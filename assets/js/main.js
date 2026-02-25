@@ -194,24 +194,24 @@
                 this.navbarCollapse.addEventListener('hide.bs.collapse', () => {
                     this.navbarToggler.classList.remove('active');
                 });
-                
+
                 // Close menu when clicking on a link (except dropdown toggles)
                 const navLinks = this.navbarCollapse.querySelectorAll('.nav-link:not(.dropdown-toggle)');
                 navLinks.forEach(link => {
                     link.addEventListener('click', () => {
-                         const bsCollapse = bootstrap.Collapse.getInstance(this.navbarCollapse);
-                         if (bsCollapse) {
-                             bsCollapse.hide();
-                         }
+                        const bsCollapse = bootstrap.Collapse.getInstance(this.navbarCollapse);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        }
                     });
                 });
 
                 // Close menu when clicking outside
                 document.addEventListener('click', (e) => {
-                    if (this.navbarCollapse.classList.contains('show') && 
-                        !this.navbarCollapse.contains(e.target) && 
+                    if (this.navbarCollapse.classList.contains('show') &&
+                        !this.navbarCollapse.contains(e.target) &&
                         !this.navbarToggler.contains(e.target)) {
-                        
+
                         const bsCollapse = bootstrap.Collapse.getInstance(this.navbarCollapse);
                         if (bsCollapse) {
                             bsCollapse.hide();

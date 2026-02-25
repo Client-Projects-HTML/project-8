@@ -43,7 +43,7 @@
         }
     </style>
     <script>
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('theme-preference');
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
@@ -67,10 +67,12 @@
 
                     <form class="mb-5" action="#" method="search">
                         <div class="input-group input-group-lg justify-content-center">
-                            <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
                             <input type="search" class="form-control" placeholder="Search our site..."
                                 aria-label="Search">
-                            <button class="btn btn-primary" type="submit">Search</button>
+                            <button class="btn btn-primary d-flex align-items-center gap-2" type="submit">
+                                <i class="bi bi-search"></i>
+                                <span>Search</span>
+                            </button>
                         </div>
                     </form>
 
@@ -107,6 +109,3 @@
 </body>
 
 </html>
-
-
-

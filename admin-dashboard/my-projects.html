@@ -27,8 +27,6 @@
 <body class="dashboard-page">
     <div class="dashboard-wrapper">
         <aside class="sidebar">
-            <a class="sidebar-brand d-flex align-items-center gap-2" href="../index.html"><i
-                    class="bi bi-building"></i><span>RoofPro</span></a>
             <nav class="sidebar-nav">
                 <a href="index.html" class="sidebar-link"><i class="bi bi-grid-1x2"></i><span>Dashboard</span></a>
                 <a href="warranty-tracking.html" class="sidebar-link"><i class="bi bi-shield-check"></i><span>Warranty
@@ -45,56 +43,66 @@
             <div class="mt-auto pt-4"><a href="../login.html" class="sidebar-link"><i
                         class="bi bi-box-arrow-right"></i><span>Logout</span></a></div>
         </aside>
-        <main class="main-content">
-            <div class="dashboard-header">
-                <button class="btn btn-outline-secondary d-lg-none me-2" id="sidebar-toggle"><i
-                        class="bi bi-list"></i></button>
+        </aside>
 
-                <a class="sidebar-brand d-flex d-lg-none align-items-center gap-2 me-auto text-decoration-none"
-                    href="../index.html" style="margin-bottom: 0; padding: 0;">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-outline-secondary d-lg-none me-2" id="sidebar-toggle"
+                    aria-label="Toggle sidebar">
+                    <i class="bi bi-list"></i>
+                </button>
+                <a class="sidebar-brand d-flex align-items-center gap-2 text-decoration-none" href="../index.html">
                     <i class="bi bi-building"></i>
                     <span>RoofPro</span>
                 </a>
-
-                <div class="d-flex align-items-center gap-3 ms-auto">
-                    <!-- RTL Toggle -->
-                    <button class="header-btn" id="rtl-toggle" title="Toggle Direction">
-                        <i class="bi bi-translate"></i>
-                    </button>
-
-                    <!-- Theme Toggle -->
-                    <button class="header-btn" id="theme-toggle" title="Toggle Theme">
-                        <i class="bi bi-moon"></i>
-                    </button>
-
-                    <!-- Notifications -->
-                    <div class="dropdown">
-                        <button class="notification-btn" type="button" data-bs-toggle="dropdown">
-                            <i class="bi bi-bell"></i>
-                            <span class="badge bg-danger">3</span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li>
-                                <h6 class="dropdown-header">Notifications</h6>
-                            </li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-person-plus text-primary me-2"></i>New
-                                    client registration</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-cart-check text-success me-2"></i>New
-                                    order received</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item text-center" href="#">View all notifications</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Profile -->
-                    <button class="header-profile-btn" type="button">
-                        <img src="../assets/images/avatar1.png" alt="Profile" class="rounded-circle" width="32"
-                            height="32">
-                    </button>
-                </div>
             </div>
+
+            <div class="d-flex align-items-center gap-3 ms-auto">
+                <!-- RTL Toggle -->
+                <button class="header-btn" id="rtl-toggle" title="Toggle Direction">
+                    <i class="bi bi-translate"></i>
+                </button>
+
+                <!-- Theme Toggle -->
+                <button class="header-btn" id="theme-toggle" title="Toggle Theme">
+                    <i class="bi bi-moon"></i>
+                </button>
+
+                <!-- Notifications -->
+                <div class="dropdown">
+                    <button class="notification-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-bell"></i>
+                        <span class="badge bg-danger">3</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                        <li>
+                            <h6 class="dropdown-header">Notifications</h6>
+                        </li>
+                        <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                                <i class="bi bi-person-plus text-primary"></i>
+                                <span>New client registration</span>
+                            </a></li>
+                        <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                                <i class="bi bi-cart-check text-success"></i>
+                                <span>New order received</span>
+                            </a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-center small text-primary fw-bold" href="#">View all
+                                notifications</a></li>
+                    </ul>
+                </div>
+
+                <!-- Profile -->
+                <button class="header-profile-btn" type="button" aria-label="User profile">
+                    <img src="../assets/images/avatar1.png" alt="Profile" class="rounded-circle" width="32" height="32">
+                </button>
+            </div>
+        </div>
+
+        <main class="main-content">
             <div class="row g-4">
                 <div class="col-12">
                     <div class="card border-0 shadow-sm glass-card p-4 text-center">

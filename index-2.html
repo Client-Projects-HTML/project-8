@@ -9,7 +9,7 @@
         content="Smart roofing management platform for enterprises. Track assets, schedule maintenance, and automate repairs with data-driven insights.">
     <meta name="keywords"
         content="roofing software, facility management, roof asset management, predictive maintenance, drone data">
-    <meta name="author" content="RoofPro Tech">
+    <meta name="author" content="RoofPro Eco">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph Meta Tags -->
@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://www.yourwebsite.com/index-2.html">
     <meta property="og:image" content="assets/images/og-image-tech.jpg">
 
-    <title>RoofPro | Smart Roofing Management Platform</title>
+    <title>RoofPro Eco | Sustainable & Energy-Efficient Roofing Solutions</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -46,28 +46,23 @@
         /* SaaS Specific Overrides */
         .hero {
             text-align: center;
-            padding-top: var(--space-8);
-            padding-bottom: var(--space-8);
-            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
-        }
-
-        .hero::after {
-            display: none;
-            /* Remove the bottom fade from the general layout if desired, or keep it */
+            padding-top: var(--space-12);
+            padding-bottom: var(--space-12);
+            background: var(--sand-bg);
         }
 
         .hero-title {
             font-size: 4rem;
-            background: linear-gradient(135deg, var(--gray-900) 0%, var(--primary-color) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--gray-700);
             margin-bottom: var(--space-4);
         }
 
+        .hero-title span {
+            color: var(--primary-color);
+        }
+
         [data-bs-theme="dark"] .hero-title {
-            background: linear-gradient(135deg, var(--white) 0%, var(--primary-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--white);
         }
 
         .hero-content {
@@ -94,6 +89,17 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
+        .hero-subtitle {
+            color: var(--gray-600);
+            font-size: 1.25rem;
+            margin-bottom: var(--space-6);
+        }
+
+        [data-bs-theme="dark"] .hero-subtitle {
+            color: var(--white);
+            opacity: 0.9;
+        }
+
         .feature-icon {
             width: 60px;
             height: 60px;
@@ -103,8 +109,61 @@
             justify-content: center;
             margin-bottom: var(--space-4);
             font-size: 1.75rem;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            background: rgba(185, 148, 112, 0.1);
             color: var(--primary-color);
+        }
+
+        .eco-filter {
+            filter: grayscale(0.5) sepia(0.2) saturate(1.2);
+            transition: filter 0.3s ease;
+        }
+
+        /* Responsive Overrides */
+        @media (max-width: 991.98px) {
+            .hero-title {
+                font-size: 2.5rem !important;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .floating-card {
+                display: none !important;
+            }
+
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-3);
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                padding-left: var(--space-4) !important;
+                padding-right: var(--space-4) !important;
+                font-size: 1rem !important;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: var(--space-3) !important;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                padding-left: var(--space-4) !important;
+                padding-right: var(--space-4) !important;
+                font-size: 1rem !important;
+            }
+
+            .position-absolute.bg-white.p-3.rounded-lg.shadow-lg.border-start {
+                position: relative !important;
+                top: 0 !important;
+                right: 0 !important;
+                margin-top: var(--space-4);
+                min-width: 100% !important;
+            }
         }
     </style>
 
@@ -129,7 +188,7 @@
         style="z-index: 9999;">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg sticky-top shadow-sm py-3" id="main-nav">
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm py-2 py-lg-3" id="main-nav">
         <div class="container">
             <!-- Mobile Toggle -->
             <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas"
@@ -189,7 +248,6 @@
                                         </div>
                                         <div class="dropdown-text">
                                             <span class="dropdown-title">Home 1</span>
-                                            <span class="dropdown-subtitle">General</span>
                                         </div>
                                     </a>
                                 </li>
@@ -200,7 +258,6 @@
                                         </div>
                                         <div class="dropdown-text">
                                             <span class="dropdown-title">Home 2</span>
-                                            <span class="dropdown-subtitle">SaaS / Tech</span>
                                         </div>
                                     </a>
                                 </li>
@@ -246,344 +303,524 @@
                 </div>
             </div>
         </div>
-        </nav>
+    </nav>
 
-        <!-- Main Content -->
-        <main id="main-content">
-            <!-- Hero Section -->
-            <section class="hero" aria-label="Hero section">
-                <div class="container">
-                    <div class="hero-content">
-                        <!-- Badge -->
-                        <div
-                            class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary bg-opacity-10 text-primary mb-4 border border-primary border-opacity-25">
-                            <i class="bi bi-stars"></i>
-                            <span class="fw-semibold text-sm">New: AI-Powered Analysis</span>
-                        </div>
-
-                        <h1 class="hero-title">
-                            Smart Roofing Management for Modern Enterprises
-                        </h1>
-                        <p class="hero-subtitle mx-auto" style="max-width: 600px;">
-                            Streamline your facility maintenance with our data-driven platform.
-                            Predictive insights, automated scheduling, and real-time asset monitoring in one place.
-                        </p>
-                        <div class="hero-buttons justify-content-center">
-                            <a href="signup.html" class="btn btn-primary btn-lg rounded-pill px-5">
-                                Start Free Trial
-                                <i class="bi bi-arrow-right ms-2"></i>
-                            </a>
-                            <a href="#" class="btn btn-outline-secondary btn-lg rounded-pill px-5">
-                                View Demo
-                                <i class="bi bi-play-circle ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Central Hero Image (Dashboard Mockup) -->
-                    <div class="hero-image-container">
-                        <!-- Using existing hero image but styled as a dashboard/platform preview -->
-                        <div class="position-relative">
-                            <img src="assets/images/hero.png" alt="Platform Dashboard Interface" class="img-fluid w-100"
-                                style="object-fit: cover; height: 500px; object-position: top;">
-
-                            <!-- Overlay gradient for 'tech' look -->
-                            <div class="position-absolute inset-0 w-100 h-100 rounded-xl"
-                                style="top:0; left:0; background: linear-gradient(to bottom, transparent 80%, var(--bs-body-bg) 100%); pointer-events: none;">
-                            </div>
-
-                            <!-- Floating Analytics Card -->
-                            <div class="position-absolute glass-card rounded-lg p-4 shadow-lg floating-card"
-                                style="bottom: 50px; left: -20px; z-index: 10;">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="bg-success bg-opacity-10 rounded p-2">
-                                        <i class="bi bi-graph-up-arrow text-success fs-4"></i>
-                                    </div>
-                                    <div>
-                                        <p class="mb-0 fw-bold" style="color: #000 !important;">Efficiency Up</p>
-                                        <h3 class="mb-0 fw-bold" style="color: #000 !important;">+34%</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Floating Notifications Card -->
-                            <div class="position-absolute glass-card rounded-lg p-3 shadow-lg floating-card"
-                                style="top: 100px; right: -30px; z-index: 10; animation-delay: 1.5s;">
-                                <div class="d-flex gap-3">
-                                    <div class="bg-warning rounded-circle p-1"
-                                        style="width: 10px; height: 10px; margin-top: 6px;"></div>
-                                    <div>
-                                        <p class="mb-0 fw-bold small" style="color: #000 !important;">Maintenance Alert
-                                        </p>
-                                        <small class="text-muted">Building B - Sector 4</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Logo Cloud -->
-            <section class="py-5 border-bottom border-secondary border-opacity-10">
-                <div class="container">
-                    <p class="text-center text-muted small fw-bold uppercase letter-spacing-2 mb-4">Trusted by
-                        innovative
-                        teams at</p>
-                    <div class="row justify-content-center align-items-center g-4 opacity-75 grayscale-hover">
-                        <div class="col-6 col-md-2 text-center">
-                            <span class="fw-bold fs-5 text-muted">BuildCorp</span>
-                        </div>
-                        <div class="col-6 col-md-2 text-center">
-                            <span class="fw-bold fs-5 text-muted">TechRoof</span>
-                        </div>
-                        <div class="col-6 col-md-2 text-center">
-                            <span class="fw-bold fs-5 text-muted">EcoHome</span>
-                        </div>
-                        <div class="col-6 col-md-2 text-center">
-                            <span class="fw-bold fs-5 text-muted">UrbanDev</span>
-                        </div>
-                        <div class="col-6 col-md-2 text-center">
-                            <span class="fw-bold fs-5 text-muted">SkyLine</span>
-                        </div>
-                        <div class="col-6 col-md-2 text-center">
-                            <span class="fw-bold fs-5 text-muted">ProStruct</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Features Grid -->
-            <section class="section" aria-label="Platform Features">
-                <div class="container">
-                    <div class="section-title">
-                        <h2 class="fw-bold mb-3">Everything you need to manage assets</h2>
-                        <p class="text-muted">Powerful tools designed for modern facility management.</p>
-                    </div>
-
-                    <div class="row g-4">
-                        <!-- Feature 1 -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 border-0 shadow-sm hover-lift transition-normal">
-                                <div class="card-body p-4 p-lg-5 text-center">
-                                    <div class="feature-icon mx-auto">
-                                        <i class="bi bi-cpu"></i>
-                                    </div>
-                                    <h3 class="h4 fw-bold mb-3">Smart Asset Tracking</h3>
-                                    <p class="text-muted mb-0">
-                                        Digitize your roof inventory. Track age, material, warranty status, and
-                                        condition
-                                        scores in one centralized dashboard.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Feature 2 -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 border-0 shadow-sm hover-lift transition-normal">
-                                <div class="card-body p-4 p-lg-5 text-center">
-                                    <div class="feature-icon mx-auto">
-                                        <i class="bi bi-robot"></i>
-                                    </div>
-                                    <h3 class="h4 fw-bold mb-3">Automated Workflows</h3>
-                                    <p class="text-muted mb-0">
-                                        Trigger repair tickets automatically based on inspection data. Streamline
-                                        approval
-                                        processes and reduce downtime.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Feature 3 -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 border-0 shadow-sm hover-lift transition-normal">
-                                <div class="card-body p-4 p-lg-5 text-center">
-                                    <div class="feature-icon mx-auto">
-                                        <i class="bi bi-activity"></i>
-                                    </div>
-                                    <h3 class="h4 fw-bold mb-3">Predictive Maintenance</h3>
-                                    <p class="text-muted mb-0">
-                                        AI-driven algorithms predict potential failures before they happen, saving you
-                                        up to
-                                        40% on emergency repairs.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Feature 4 -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 border-0 shadow-sm hover-lift transition-normal">
-                                <div class="card-body p-4 p-lg-5 text-center">
-                                    <div class="feature-icon mx-auto">
-                                        <i class="bi bi-shield-lock"></i>
-                                    </div>
-                                    <h3 class="h4 fw-bold mb-3">Compliance & Security</h3>
-                                    <p class="text-muted mb-0">
-                                        Keep all your compliance documents, safety reports, and insurance certificates
-                                        organized and audit-ready.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Feature 5 -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 border-0 shadow-sm hover-lift transition-normal">
-                                <div class="card-body p-4 p-lg-5 text-center">
-                                    <div class="feature-icon mx-auto">
-                                        <i class="bi bi-camera-video"></i>
-                                    </div>
-                                    <h3 class="h4 fw-bold mb-3">Aerial Intelligence</h3>
-                                    <p class="text-muted mb-0">
-                                        Integrate drone imagery and thermal mapping directly into your project files for
-                                        unparalleled visibility.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Feature 6 -->
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card h-100 border-0 shadow-sm hover-lift transition-normal">
-                                <div class="card-body p-4 p-lg-5 text-center">
-                                    <div class="feature-icon mx-auto">
-                                        <i class="bi bi-phone"></i>
-                                    </div>
-                                    <h3 class="h4 fw-bold mb-3">Mobile Field App</h3>
-                                    <p class="text-muted mb-0">
-                                        Give your on-site teams the tools they need. Upload photos, update status, and
-                                        close
-                                        tickets from anywhere.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Stats Section (Styled differently) -->
-            <section class="py-5 bg-dark text-white rounded-xl mx-3 mx-lg-5 my-5 position-relative overflow-hidden">
-                <!-- Abstract Background Shapes -->
-                <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10"
-                    style="background-image: radial-gradient(circle at 10% 20%, white 0%, transparent 20%), radial-gradient(circle at 90% 80%, white 0%, transparent 20%);">
-                </div>
-
-                <div class="container position-relative z-1">
-                    <div class="row text-center g-4">
-                        <div class="col-md-3">
-                            <h2 class="display-4 fw-bold mb-0">1M+</h2>
-                            <p class="opacity-75">Sq. Ft. Managed</p>
-                        </div>
-                        <div class="col-md-3">
-                            <h2 class="display-4 fw-bold mb-0">99.9%</h2>
-                            <p class="opacity-75">Uptime Reliability</p>
-                        </div>
-                        <div class="col-md-3">
-                            <h2 class="display-4 fw-bold mb-0">45%</h2>
-                            <p class="opacity-75">Cost Reduction</p>
-                        </div>
-                        <div class="col-md-3">
-                            <h2 class="display-4 fw-bold mb-0">24/7</h2>
-                            <p class="opacity-75">Support Access</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA Section -->
-            <section class="section">
-                <div class="container">
-                    <div
-                        class="bg-primary bg-opacity-5 rounded-xl p-5 border border-primary border-opacity-10 text-center">
-                        <h2 class="fw-bold mb-3">Ready to modernize your roofing strategy?</h2>
-                        <p class="mb-4 mx-auto" style="color: #000000; max-width: 600px;">
-                            Join forward-thinking enterprises using RoofPro Tech to reduce costs and improve safety.
-                        </p>
-                        <div class="d-flex justify-content-center gap-3">
-                            <a href="signup.html" class="btn btn-primary px-5 py-3 rounded-pill">Get Started Now</a>
-                            <a href="contact.html"
-                                class="btn btn-outline-primary px-5 py-3 rounded-pill bg-white">Contact
-                                Sales</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- Footer -->
-        <footer class="footer" role="contentinfo">
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-label="Hero section">
             <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-4">
-                        <a class="footer-brand d-flex align-items-center gap-2 mb-4" href="index.html">
-                            <i class="bi bi-rocket-takeoff-fill"></i>
-                            <span>RoofPro Tech</span>
+                <div class="hero-content">
+
+                    <h1 class="hero-title" style="font-weight: 800; line-height: 1.1;">
+                        <span class="text-sand">Sustainable Roofing</span> for <br>
+                        <span class="text-secondary" style="font-weight: 900;">Greener Business Future</span>
+                    </h1>
+                    <p class="hero-subtitle mx-auto" style="max-width: 600px;">
+                        Energy-efficient roofing solutions that lower your bills and carbon footprint.
+                        From solar-ready systems to reflective coatings, we build roofs that pay for themselves.
+                    </p>
+                    <div class="hero-buttons d-flex justify-content-center gap-3">
+                        <a href="signup.html" class="btn btn-primary btn-lg rounded-pill px-5">
+                            Get Quote
+                            <i class="bi bi-arrow-right ms-2"></i>
                         </a>
-                        <p class="text-secondary mb-4">
-                            The leading platform for enterprise roof asset management.
-                            Built for scale, security, and smart decision making.
-                        </p>
-                        <div class="d-flex gap-3">
-                            <!-- Socials same as index -->
-                            <a href="#" class="btn btn-icon btn-outline-secondary"><i class="bi bi-twitter-x"></i></a>
-                            <a href="#" class="btn btn-icon btn-outline-secondary"><i class="bi bi-linkedin"></i></a>
-                            <a href="#" class="btn btn-icon btn-outline-secondary"><i class="bi bi-github"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-lg-2">
-                        <h4 class="footer-title">Platform</h4>
-                        <ul class="footer-links">
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Integrations</a></li>
-                            <li><a href="#">Enterprise</a></li>
-                            <li><a href="#">Security</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-6 col-lg-3">
-                        <h4 class="footer-title">Resources</h4>
-                        <ul class="footer-links">
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">API Reference</a></li>
-                            <li><a href="#">Case Studies</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <h4 class="footer-title">Contact</h4>
-                        <ul class="footer-links">
-                            <li><a href="mailto:sales@roofprotech.com">sales@roofprotech.com</a></li>
-                            <li><a href="#">+1 (888) 123-4567</a></li>
-                            <li><a href="#">San Francisco, CA</a></li>
-                        </ul>
+                        <a href="#impact" class="btn btn-outline-primary btn-lg rounded-pill px-5">
+                            Our Impact
+                            <i class="bi bi-droplet ms-2"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="footer-bottom">
-                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-                        <p class="mb-0">&copy; 2024 RoofPro Tech. All rights reserved.</p>
-                        <p class="mb-0"><a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                <!-- Central Hero Image (Dashboard Mockup) -->
+                <div class="hero-image-container">
+                    <!-- Using existing hero image but styled as a dashboard/platform preview -->
+                    <div class="position-relative">
+                        <img src="assets/images/eco-hero.png" alt="Aurum Tower Sustainable Roofing"
+                            class="img-fluid w-100" style="object-fit: cover; height: 500px; object-position: center;">
+
+                        <!-- Overlay gradient for 'tech' look -->
+                        <div class="position-absolute inset-0 w-100 h-100 rounded-xl"
+                            style="top:0; left:0; background: linear-gradient(to bottom, transparent 80%, var(--bs-body-bg) 100%); pointer-events: none; background-clip: padding-box;">
+                        </div>
+
+                        <!-- Floating Analytics Card -->
+                        <div class="position-absolute glass-card rounded-lg p-4 shadow-lg floating-card"
+                            style="bottom: 50px; left: -20px; z-index: 10;">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-success bg-opacity-10 rounded p-2">
+                                    <i class="bi bi-graph-up-arrow text-success fs-4"></i>
+                                </div>
+                                <div>
+                                    <p class="mb-0 fw-bold" style="color: #000 !important;">Efficiency Up</p>
+                                    <h3 class="mb-0 fw-bold" style="color: #000 !important;">+34%</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Notifications Card -->
+                        <div class="position-absolute glass-card rounded-lg p-3 shadow-lg floating-card"
+                            style="top: 100px; right: -30px; z-index: 10; animation-delay: 1.5s;">
+                            <div class="d-flex gap-3">
+                                <div class="bg-warning rounded-circle p-1"
+                                    style="width: 10px; height: 10px; margin-top: 6px;"></div>
+                                <div>
+                                    <p class="mb-0 fw-bold small" style="color: #000 !important;">Maintenance Alert
+                                    </p>
+                                    <small class="text-muted">Building B - Sector 4</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </section>
 
-        <!-- Back to Top Button -->
-        <a href="#" id="back-to-top" class="btn btn-primary btn-icon position-fixed bottom-0 end-0 m-4"
-            style="display: none; z-index: 1000;" aria-label="Back to top">
-            <i class="bi bi-arrow-up"></i>
-        </a>
+        <!-- Logo Cloud -->
+        <section class="py-5 border-bottom border-secondary border-opacity-10">
+            <div class="container">
+                <p class="text-center text-muted small fw-bold uppercase letter-spacing-2 mb-4">Trusted by
+                    innovative
+                    teams at</p>
+                <div class="row justify-content-center align-items-center g-4 opacity-75 grayscale-hover">
+                    <div class="col-6 col-md-2 text-center">
+                        <span class="fw-bold fs-5 text-muted">BuildCorp</span>
+                    </div>
+                    <div class="col-6 col-md-2 text-center">
+                        <span class="fw-bold fs-5 text-muted">TechRoof</span>
+                    </div>
+                    <div class="col-6 col-md-2 text-center">
+                        <span class="fw-bold fs-5 text-muted">EcoHome</span>
+                    </div>
+                    <div class="col-6 col-md-2 text-center">
+                        <span class="fw-bold fs-5 text-muted">UrbanDev</span>
+                    </div>
+                    <div class="col-6 col-md-2 text-center">
+                        <span class="fw-bold fs-5 text-muted">SkyLine</span>
+                    </div>
+                    <div class="col-6 col-md-2 text-center">
+                        <span class="fw-bold fs-5 text-muted">ProStruct</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- JavaScript Libraries -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/main.js"></script>
+        <!-- Features Grid -->
+        <section class="section" aria-label="Platform Features">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="fw-bold mb-3">Everything you need to manage assets</h2>
+                    <p class="text-muted">Powerful tools designed for modern facility management.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Feature 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm hover-lift transition-normal">
+                            <div class="card-body p-4 p-lg-5 text-center">
+                                <div class="feature-icon mx-auto"
+                                    style="background: rgba(185, 148, 112, 0.1); color: var(--primary-color);">
+                                    <i class="bi bi-sun"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Solar Integration</h3>
+                                <p class="text-muted mb-0">
+                                    High-efficiency photovoltaic shingles and panels integrated seamlessly into your
+                                    commercial roofing system.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm hover-lift transition-normal">
+                            <div class="card-body p-4 p-lg-5 text-center">
+                                <div class="feature-icon mx-auto"
+                                    style="background: rgba(185, 148, 112, 0.1); color: var(--primary-color);">
+                                    <i class="bi bi-thermometer-half"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Cool Roof Tech</h3>
+                                <p class="text-muted mb-0">
+                                    UV-reflective coatings that reduce rooftop temperatures and lower cooling costs by
+                                    up to 30% annually.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm hover-lift transition-normal">
+                            <div class="card-body p-4 p-lg-5 text-center">
+                                <div class="feature-icon mx-auto"
+                                    style="background: rgba(185, 148, 112, 0.1); color: var(--primary-color);">
+                                    <i class="bi bi-tree"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Green Living Roofs</h3>
+                                <p class="text-muted mb-0">
+                                    Urban vegetation systems providing natural insulation, stormwater management, and
+                                    air purification.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm hover-lift transition-normal">
+                            <div class="card-body p-4 p-lg-5 text-center">
+                                <div class="feature-icon mx-auto"
+                                    style="background: rgba(185, 148, 112, 0.1); color: var(--primary-color);">
+                                    <i class="bi bi-bar-chart-line"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Energy Audits</h3>
+                                <p class="text-muted mb-0">
+                                    Acoustic and thermal audits to identify energy leaks and optimize your building's
+                                    overall eco-performance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm hover-lift transition-normal">
+                            <div class="card-body p-4 p-lg-5 text-center">
+                                <div class="feature-icon mx-auto"
+                                    style="background: rgba(185, 148, 112, 0.1); color: var(--primary-color);">
+                                    <i class="bi bi-recycle"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Circular Materials</h3>
+                                <p class="text-muted mb-0">
+                                    Roofing systems crafted from 100% recyclable and ethically sourced sustainable
+                                    materials.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm hover-lift transition-normal">
+                            <div class="card-body p-4 p-lg-5 text-center">
+                                <div class="feature-icon mx-auto"
+                                    style="background: rgba(185, 148, 112, 0.1); color: var(--primary-color);">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <h3 class="h4 fw-bold mb-3">Storm Resilience</h3>
+                                <p class="text-muted mb-0">
+                                    Eco-engineered systems designed to withstand extreme weather while maintaining
+                                    minimal environmental impact.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eco-Process Section -->
+        <section class="section bg-light" id="impact" aria-label="Our Sustainability Process">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold mb-4">Our Sustainable Roofing Process</h2>
+                        <div class="process-steps">
+                            <div class="d-flex gap-4 mb-4">
+                                <div class="step-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="bi bi-search fs-3"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold text-uppercase">Assessment</h4>
+                                    <p class="text-muted">We use advanced drone thermography to identify heat loss and
+                                        energy inefficiencies in your current structure.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-4 mb-4">
+                                <div class="step-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="bi bi-intersect fs-3"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold text-uppercase">Integration</h4>
+                                    <p class="text-muted">Our engineers design a custom solution integrating solar
+                                        panels, cool coatings, or living vegetation based on your needs.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-4 mb-4">
+                                <div class="step-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="bi bi-tools fs-3"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold text-uppercase">Precision Installation</h4>
+                                    <p class="text-muted">Our certified eco-installers execute the project with minimal
+                                        waste and maximum attention to sustainability standards.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-4">
+                                <div class="step-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="bi bi-cpu fs-3"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold text-uppercase">Optimization</h4>
+                                    <p class="text-muted">We set up real-time energy monitoring to track your savings
+                                        and ensure your roof performs at peak efficiency.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative">
+                            <img src="assets/images/eco-process.png" alt="Sustainable Process Infographic"
+                                class="img-fluid rounded-xl shadow-lg">
+                            <div class="position-absolute bg-white p-3 rounded-lg shadow-lg border-start border-4 border-primary"
+                                style="top: 30px; right: 30px; z-index: 5; min-width: 200px;">
+                                <p class="mb-1 fw-bold small text-secondary text-uppercase letter-spacing-1">Proprietary
+                                    Technology</p>
+                                <span class="text-sand small fw-bold">LEED Certified Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sustainable Materials Gallery -->
+        <section class="section bg-light" aria-label="Eco-Friendly Roofing Materials">
+            <div class="container">
+                <div class="section-title text-center mb-5">
+                    <h2 class="fw-bold">Our Sustainable Materials</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">We source the highest quality eco-friendly
+                        materials that maximize durability while minimizing environmental impact.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm overflow-hidden h-100">
+                            <img src="assets/images/blog/cool-roofs.png" alt="Cool Roof Membrane"
+                                class="card-img-top eco-filter">
+                            <div class="card-body">
+                                <h4 class="h5 fw-bold">Reflective Membranes</h4>
+                                <p class="text-muted small mb-0">High-albedo TPO and PVC systems that bounce solar heat
+                                    back into the atmosphere.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm overflow-hidden h-100">
+                            <img src="assets/images/services/installation.png" alt="Solar Shingles"
+                                class="card-img-top eco-filter">
+                            <div class="card-body">
+                                <h4 class="h5 fw-bold">Solar Integrated Tiles</h4>
+                                <p class="text-muted small mb-0">Photovoltaic cells built directly into the roofing
+                                    material for a seamless look.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm overflow-hidden h-100">
+                            <img src="assets/images/blog/tpo-roofing.png" alt="Recycled Steel"
+                                class="card-img-top eco-filter">
+                            <div class="card-body">
+                                <h4 class="h5 fw-bold">Recycled Steel Systems</h4>
+                                <p class="text-muted small mb-0">100% recyclable steel panels with ultra-long lifespans
+                                    and zero landfill waste.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Benefits Section -->
+        <section class="section" aria-label="Tax Credits and Savings">
+            <div class="container text-center">
+                <div class="section-title mb-5">
+                    <h2 class="fw-bold">Investment & Financial ROI</h2>
+                    <p class="text-muted mx-auto" style="max-width: 700px;">Going green isn't just good for the
+                        planet—it's phenomenal for your bottom line. Benefit from federal tax credits and massive
+                        utility savings.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 bg-primary p-4 text-white">
+                            <i class="bi bi-piggy-bank text-white fs-1 mb-3"></i>
+                            <h3 class="h5 fw-bold text-white">Federal Tax Credits</h3>
+                            <p class="text-white opacity-75 small mb-0">Access up to 30% investment tax credits for
+                                solar-integrated roofing systems under current federal programs.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 bg-primary p-4 text-white">
+                            <i class="bi bi-lightning-charge text-white fs-1 mb-3"></i>
+                            <h3 class="h5 fw-bold text-white">Reduced Utility Bills</h3>
+                            <p class="text-white opacity-75 small mb-0">Cool roof coatings can reduce air conditioning
+                                energy usage by 10-30% by reflecting solar heat away.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card h-100 border-0 bg-primary p-4 text-white">
+                            <i class="bi bi-house-star text-white fs-1 mb-3"></i>
+                            <h3 class="h5 fw-bold text-white">Increased Asset Value</h3>
+                            <p class="text-white opacity-75 small mb-0">Sustainable buildings command higher rental
+                                rates
+                                and have significantly higher resale value in commercial markets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section (Styled differently) -->
+        <section class="py-5 bg-dark text-white rounded-xl mx-3 mx-lg-5 my-5 position-relative overflow-hidden">
+            <!-- Abstract Background Shapes -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10"
+                style="background-image: radial-gradient(circle at 10% 20%, white 0%, transparent 20%), radial-gradient(circle at 90% 80%, white 0%, transparent 20%);">
+            </div>
+
+            <div class="container position-relative z-1">
+                <div class="row text-center g-4">
+                    <div class="col-md-3">
+                        <h2 class="display-4 fw-bold mb-0 text-white">500k+</h2>
+                        <p class="opacity-75">Tons CO2 Saved</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 class="display-4 fw-bold mb-0 text-white">+45%</h2>
+                        <p class="opacity-75">Energy Efficiency</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 class="display-4 fw-bold mb-0 text-white">$10M+</h2>
+                        <p class="opacity-75">Customer Savings</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h2 class="display-4 fw-bold mb-0 text-white">A+</h2>
+                        <p class="opacity-75">Resilience Rating</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section">
+            <div class="container">
+                <div class="bg-primary rounded-xl p-5 text-center shadow-lg">
+                    <h2 class="fw-bold mb-3 text-white">Ready to go green with your roofing strategy?</h2>
+                    <p class="mb-4 mx-auto text-white opacity-75" style="max-width: 600px;">
+                        Join forward-thinking enterprises using RoofPro Eco to reduce costs and improve safety.
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 cta-buttons">
+                        <a href="signup.html" class="btn btn-light px-5 py-3 rounded-pill text-primary fw-bold">Get
+                            Started Now</a>
+                        <a href="contact.html" class="btn btn-outline-light px-5 py-3 rounded-pill">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="footer-brand d-flex align-items-center gap-2 mb-4" href="index.html">
+                        <i class="bi bi-building"></i>
+                        <span>RoofPro</span>
+                    </a>
+                    <p class="text-secondary mb-4">
+                        Professional commercial roofing services backed by 20+ years of experience.
+                        Quality installations, repairs, and maintenance for businesses.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Twitter">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="#" class="btn btn-icon btn-outline-secondary" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="coming-soon.html">Events</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="service-details.html">Roof Installation</a></li>
+                        <li><a href="service-details.html">Roof Repair</a></li>
+                        <li><a href="service-details.html">Preventive Maintenance</a></li>
+                        <li><a href="service-details.html">Emergency Repairs</a></li>
+                        <li><a href="service-details.html">Drone Inspections</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <ul class="footer-links">
+                        <li class="d-flex align-items-start gap-3">
+                            <i class="bi bi-geo-alt text-primary"></i>
+                            <span>123 Business Ave, Suite 100<br>City, State 12345</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-3">
+                            <i class="bi bi-telephone text-primary"></i>
+                            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                        </li>
+                        <li class="d-flex align-items-center gap-3">
+                            <i class="bi bi-envelope text-primary"></i>
+                            <a href="mailto:info@roofpro.com">info@roofpro.com</a>
+                        </li>
+                        <li class="d-flex align-items-center gap-3">
+                            <i class="bi bi-clock text-primary"></i>
+                            <span>Mon-Fri: 8AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                    <p class="mb-0 text-center text-md-start">&copy; 2024 RoofPro. All rights reserved. |
+                        <a href="#">Privacy Policy</a> |
+                        <a href="#">Terms of Service</a>
+                    </p>
+                    <p class="mb-0 text-center text-md-end">
+                        Powered by <a href="https://www.abhivorn.com/" target="_blank">AbhiVorn Technologies Pvt.
+                            Ltd.</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="btn btn-primary btn-icon position-fixed bottom-0 end-0 m-4"
+        style="display: none; z-index: 1000;" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

@@ -35,7 +35,7 @@
 
                 // Close sidebar on outside click (mobile)
                 document.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 1024 &&
+                    if (window.innerWidth <= 991.98 &&
                         this.sidebar.classList.contains('open') &&
                         !this.sidebar.contains(e.target) &&
                         !this.toggleBtn.contains(e.target)) {

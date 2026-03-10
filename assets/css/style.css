@@ -1468,6 +1468,40 @@ textarea {
     }
 }
 
+/* Tablet / Small Desktop Optimization for Stat Cards */
+@media (min-width: 992px) and (max-width: 1201px) {
+    .sidebar {
+        width: 240px;
+    }
+
+    .main-content {
+        margin-left: 240px;
+        width: calc(100% - 240px);
+        padding: var(--space-4);
+    }
+
+    .stat-card {
+        padding: 0.75rem;
+        gap: 0.5rem;
+    }
+
+    .stat-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.25rem;
+        border-radius: 8px;
+    }
+
+    .stat-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .stat-info p {
+        font-size: 0.75rem;
+        line-height: 1.1;
+    }
+}
+
 /* Dashboard row spacing fix */
 .main-content>.row {
     margin-bottom: var(--space-3);
